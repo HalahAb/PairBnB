@@ -1,0 +1,1154 @@
+Started GET "/" for 127.0.0.1 at 2018-02-13 09:54:43 +0800
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (395.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (119.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(136846772350273440)[0m
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180212150751)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (168.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying NOT NULL, "encrypted_password" character varying(128) NOT NULL, "confirmation_token" character varying(128), "remember_token" character varying(128) NOT NULL)[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_remember_token" ON "users"  ("remember_token")[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180212150751"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-13 01:55:46.653196"], ["updated_at", "2018-02-13 01:55:46.653196"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(136846772350273440)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-02-13 09:56:01 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.4ms)
+Completed 200 OK in 113ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 09:56:10 +0800
+Processing by Clearance::UsersController#new as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/users/new.html.erb within layouts/application
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/users/_form.html.erb (87.2ms)
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/users/new.html.erb within layouts/application (196.8ms)
+Completed 200 OK in 837ms (Views: 730.3ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-13 09:56:55 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/sessions/new.html.erb within layouts/application
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/sessions/_form.html.erb (3.7ms)
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/sessions/new.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 349ms (Views: 304.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 09:57:22 +0800
+Processing by Clearance::UsersController#new as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/users/new.html.erb within layouts/application
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/users/_form.html.erb (2.3ms)
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views/users/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-02-13 09:57:48 +0800
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"halah1234@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (28.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "halah1234@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (25.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2018-02-13 01:57:48.255176"], ["updated_at", "2018-02-13 01:57:48.255176"], ["email", "halah1234@gmail.com"], ["encrypted_password", "$2a$10$D3YkrcOA5td6kyCaImq18eSDuT5d.b1pqLmYXLW1MxKKPe8iTslFS"], ["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 224ms (ActiveRecord: 60.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 09:57:48 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 39ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-13 09:58:00 +0800
+Processing by Clearance::SessionsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 44ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 09:58:00 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 10:10:06 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 62ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:03:48 +0800
+  
+ArgumentError (Invalid route name, already in use: 'sign_in' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:578:in `add_route'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:1920:in `add_route'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:1891:in `decomposed_match'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:1855:in `block in map_match'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:1849:in `each'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:1849:in `map_match'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:1597:in `match'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:730:in `map_method'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:691:in `get'
+clearance (1.16.1) config/routes.rb:19:in `block in <top (required)>'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:426:in `instance_exec'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:426:in `eval_block'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:408:in `draw'
+clearance (1.16.1) config/routes.rb:2:in `<top (required)>'
+activesupport (5.1.4) lib/active_support/dependencies.rb:286:in `load'
+activesupport (5.1.4) lib/active_support/dependencies.rb:286:in `block in load'
+activesupport (5.1.4) lib/active_support/dependencies.rb:258:in `load_dependency'
+activesupport (5.1.4) lib/active_support/dependencies.rb:286:in `load'
+railties (5.1.4) lib/rails/application/routes_reloader.rb:55:in `block in load_paths'
+railties (5.1.4) lib/rails/application/routes_reloader.rb:55:in `each'
+railties (5.1.4) lib/rails/application/routes_reloader.rb:55:in `load_paths'
+railties (5.1.4) lib/rails/application/routes_reloader.rb:18:in `reload!'
+railties (5.1.4) lib/rails/application/routes_reloader.rb:41:in `block in updater'
+activesupport (5.1.4) lib/active_support/file_update_checker.rb:81:in `execute'
+railties (5.1.4) lib/rails/application/routes_reloader.rb:25:in `execute'
+railties (5.1.4) lib/rails/application/finisher.rb:141:in `block (2 levels) in <module:Finisher>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `instance_exec'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:601:in `block (2 levels) in default_terminator'
+activesupport (5.1.4) lib/active_support/callbacks.rb:600:in `catch'
+activesupport (5.1.4) lib/active_support/callbacks.rb:600:in `block in default_terminator'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+activesupport (5.1.4) lib/active_support/execution_wrapper.rb:108:in `run!'
+activesupport (5.1.4) lib/active_support/reloader.rb:113:in `run!'
+activesupport (5.1.4) lib/active_support/execution_wrapper.rb:70:in `block in run!'
+activesupport (5.1.4) lib/active_support/execution_wrapper.rb:67:in `tap'
+activesupport (5.1.4) lib/active_support/execution_wrapper.rb:67:in `run!'
+activesupport (5.1.4) lib/active_support/reloader.rb:59:in `run!'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:10:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:07:28 +0800
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 115ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:07:28 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:07:55 +0800
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:07:55 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:08:09 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:08:17 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:10:53 +0800
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:10:53 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:12:21 +0800
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 30ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:12:26 +0800
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 52ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:12:26 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:12:37 +0800
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:12:37 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:13:32 +0800
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:13:32 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-13 11:25:23 +0800
+Processing by Clearance::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "f24bb1306bc6e70fac77e207452c3973c07ff6f9"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :redirect_signed_in_users rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-13 11:25:23 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2018-02-13 11:28:01 +0800
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (31.7ms)
+  Rendered users/new.html.erb within layouts/application (169.5ms)
+Completed 200 OK in 454ms (Views: 452.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(136846772350273440)[0m
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(136846772350273440)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-13 15:43:11 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (3.7ms)
+  Rendered sessions/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 255ms (Views: 254.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(136846772350273440)[0m
+  [1m[35m (20.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangePasswordRequiredForUsers (20180214024536)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (50.0ms)[0m  [1m[35mALTER TABLE "users" ALTER "encrypted_password" DROP NOT NULL[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180214024536"]]
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(136846772350273440)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(136846772350273440)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAuthentications (20180214025219)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (172.9ms)[0m  [1m[35mCREATE TABLE "authentications" ("id" bigserial primary key, "uid" character varying, "token" character varying, "provider" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_08833fecbe"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_authentications_on_user_id" ON "authentications"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180214025219"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(136846772350273440)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-14 11:59:45 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (18.9ms)
+  Rendered sessions/new.html.erb within layouts/application (166.1ms)
+Completed 200 OK in 544ms (Views: 535.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 11:59:50 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 41ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 12:00:10 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2018-02-14 12:00:20 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome" for 127.0.0.1 at 2018-02-14 12:04:42 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome" for 127.0.0.1 at 2018-02-14 12:08:22 +0800
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome" for 127.0.0.1 at 2018-02-14 12:09:34 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome" for 127.0.0.1 at 2018-02-14 12:10:06 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/welcome" for 127.0.0.1 at 2018-02-14 12:12:03 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+TypeError (superclass must be a Class (Module given)):
+  
+app/controllers/welcome_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-14 12:44:03 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+TypeError (superclass must be a Class (Module given)):
+  
+app/controllers/welcome_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-14 13:18:37 +0800
+  
+TypeError (superclass must be a Class (Module given)):
+  
+app/controllers/welcome_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-02-14 13:19:34 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 567ms (Views: 561.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 13:19:40 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 13:19:40 +0800
+Started GET "/" for 127.0.0.1 at 2018-02-14 13:23:48 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 246ms (Views: 219.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 14:32:46 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 233ms (Views: 227.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:32:49 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:32:49 +0800
+Started GET "/auth/facebook/callback?error=access_denied&error_code=200&error_description=Permissions%20error&error_reason=user_denied&state=d58295bcdaa5f84eb5d2addeffe66d3f8a0b661969e667fd" for 127.0.0.1 at 2018-02-14 14:32:54 +0800
+  
+OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)):
+  
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:147:in `with_authorization_code!'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+clearance (1.16.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 14:36:01 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:36:29 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:36:29 +0800
+Started GET "/auth/facebook/callback?code=AQDHTy1jjOckEt4QPfC7hN1R_c-lfUmP6lyxURcoEVqzT_iAxw8C_7-r_5ydGEbhnRrOTzOy_Ega5KayeA6XSACP_rO5zjJuB04Ho57DoVGSsYnbNLapYDo5G36KOZYg20sPsnFsgxMhToX6TeAnKRtLJSjQ7K3RTjSCl15ON07pHnNhkPbweXNGSuvO-b0m42dnAynTKmFKb62imoO7952V5EKWJPhjUucS_nLLEvly_ABXVEI3DO-MsOoIuot1heVFWkDvUnkOb4T7NbR7JZn-vjwGfmlKZSTVQrq7I7evt6NHCh2wnVeIn8rymK3HBuXMrZbYvqJoL3dCzVtXqoAS&state=8d3b98050a04953c1b9702ea97ee8ae25b1f81ece7e4dc41" for 127.0.0.1 at 2018-02-14 14:36:34 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQDHTy1jjOckEt4QPfC7hN1R_c-lfUmP6lyxURcoEVqzT_iAxw8C_7-r_5ydGEbhnRrOTzOy_Ega5KayeA6XSACP_rO5zjJuB04Ho57DoVGSsYnbNLapYDo5G36KOZYg20sPsnFsgxMhToX6TeAnKRtLJSjQ7K3RTjSCl15ON07pHnNhkPbweXNGSuvO-b0m42dnAynTKmFKb62imoO7952V5EKWJPhjUucS_nLLEvly_ABXVEI3DO-MsOoIuot1heVFWkDvUnkOb4T7NbR7JZn-vjwGfmlKZSTVQrq7I7evt6NHCh2wnVeIn8rymK3HBuXMrZbYvqJoL3dCzVtXqoAS", "state"=>"8d3b98050a04953c1b9702ea97ee8ae25b1f81ece7e4dc41", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (35.8ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 47.1ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for User.):
+  
+app/models/user.rb:6:in `create_with_auth_and_hash'
+app/controllers/sessions_controller.rb:14:in `create_from_omniauth'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(136846772350273440)[0m
+  [1m[35m (25.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToUsers (20180214065146)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.2ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180214065146"]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(136846772350273440)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/facebook/callback?code=AQCiFr3QAjanFgJGwyD-D7jYevPcQyyIgbQefVOURTjE4IE3Ncl8GfmHgOjEOasrddvTc6rYh9GqaC4wJTZX2yQ4V96oUY_cJqUQBIyZZiatT1mMwkoPw9iR4-7xPvg8UMLIdd7_dD8EnUIg7sUlpwHObPd999qyPpUIQq2jUglAJyjrDBa05_b_fMOIbrNiKI5EqqAYnX-YUlZ3ur6K02Ce096vjyito07ud00JG2Ued7wjbTj9c2KKlahFLED331wv_UFu44NNMc-KEMOpNaINgLuuylOcPmGMst4Y5pPij5x956vxayNMSfkOlg1w4KrQNiw1uWjo1wgoWrJPiZ38&state=8d3b98050a04953c1b9702ea97ee8ae25b1f81ece7e4dc41" for 127.0.0.1 at 2018-02-14 14:56:44 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQCiFr3QAjanFgJGwyD-D7jYevPcQyyIgbQefVOURTjE4IE3Ncl8GfmHgOjEOasrddvTc6rYh9GqaC4wJTZX2yQ4V96oUY_cJqUQBIyZZiatT1mMwkoPw9iR4-7xPvg8UMLIdd7_dD8EnUIg7sUlpwHObPd999qyPpUIQq2jUglAJyjrDBa05_b_fMOIbrNiKI5EqqAYnX-YUlZ3ur6K02Ce096vjyito07ud00JG2Ued7wjbTj9c2KKlahFLED331wv_UFu44NNMc-KEMOpNaINgLuuylOcPmGMst4Y5pPij5x956vxayNMSfkOlg1w4KrQNiw1uWjo1wgoWrJPiZ38", "state"=>"8d3b98050a04953c1b9702ea97ee8ae25b1f81ece7e4dc41", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.4ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for User.):
+  
+app/models/user.rb:6:in `create_with_auth_and_hash'
+app/controllers/sessions_controller.rb:14:in `create_from_omniauth'
+Started GET "/" for 127.0.0.1 at 2018-02-14 14:56:51 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:56:53 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:56:53 +0800
+Started GET "/auth/facebook/callback?code=AQDr9oR2pmuY6OT9f50DX0ivFLPMkf5WW8xZvVAquw4IkX9B4g5R7PYLgHQmM5NGr6QTL10ghiec1PaWp_dyUT00TJHs4dQOWIlOuQiJ_rBaYjx7CIFajDLCnIc5PuOg5G0oGYP7Mgry-xFaYMft-EUNkujKm44KUdTCBGgJ7_QVYM7W6iGrNXZsuk2FfhZsjxivdjqagWpMhT3oZN8RY-I2ij0U64T1LElr6k3r8QGztW9nsbq2lM0_Ilgnl_I-N_3l_HCeW5GWgt9mdn8LOpLszsmrJGCsutp18gxiZu0aT-BYK7oFl4ChiSoV8ez8jvVtiUFcbRbKgePUgEVpUV5p&state=8ce04f085ac153c4a1c6d8590abf0a91cbefa55d4af6f558" for 127.0.0.1 at 2018-02-14 14:56:54 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQDr9oR2pmuY6OT9f50DX0ivFLPMkf5WW8xZvVAquw4IkX9B4g5R7PYLgHQmM5NGr6QTL10ghiec1PaWp_dyUT00TJHs4dQOWIlOuQiJ_rBaYjx7CIFajDLCnIc5PuOg5G0oGYP7Mgry-xFaYMft-EUNkujKm44KUdTCBGgJ7_QVYM7W6iGrNXZsuk2FfhZsjxivdjqagWpMhT3oZN8RY-I2ij0U64T1LElr6k3r8QGztW9nsbq2lM0_Ilgnl_I-N_3l_HCeW5GWgt9mdn8LOpLszsmrJGCsutp18gxiZu0aT-BYK7oFl4ChiSoV8ez8jvVtiUFcbRbKgePUgEVpUV5p", "state"=>"8ce04f085ac153c4a1c6d8590abf0a91cbefa55d4af6f558", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (1.9ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for User.):
+  
+app/models/user.rb:6:in `create_with_auth_and_hash'
+app/controllers/sessions_controller.rb:14:in `create_from_omniauth'
+Started GET "/" for 127.0.0.1 at 2018-02-14 14:57:46 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 465ms (Views: 453.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:57:49 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:57:49 +0800
+Started GET "/auth/facebook/callback?code=AQBgS7j_I0UtodTvd4kLi4t2aphGgVC0akAxD2Tqc7j9bu8Hvr6xZeieSI0Qw0In4NLyc_pW7e5zvdDr0oPEhldo6sI0Z3iMdhHs3VGHHQYkt7W2uRuZ0uIKLnYGzix2h4WaFtdQSB7W-r6bKL7Wi8JSTnZWI_Nwo8WNzivNsJrsSJ26KAH_h_gwJAoMTu3iyLu7UWNi8wea-xYaB1IUbnO4GxjBJu3tsTF3DmXqg_ydqCrZPJdtJrFbWePkY5PYctoyiDMjAZez9CfFNOq-JVfNQEOqhJ4NzLDLE6zWgDkvwYTifR555vbn6Cg3Smj8PQHfl0YqR44d7N2MScVMXmgr&state=35a67818f749996b3e02d904f5e1caa7aececd1f3ca7fc86" for 127.0.0.1 at 2018-02-14 14:57:50 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQBgS7j_I0UtodTvd4kLi4t2aphGgVC0akAxD2Tqc7j9bu8Hvr6xZeieSI0Qw0In4NLyc_pW7e5zvdDr0oPEhldo6sI0Z3iMdhHs3VGHHQYkt7W2uRuZ0uIKLnYGzix2h4WaFtdQSB7W-r6bKL7Wi8JSTnZWI_Nwo8WNzivNsJrsSJ26KAH_h_gwJAoMTu3iyLu7UWNi8wea-xYaB1IUbnO4GxjBJu3tsTF3DmXqg_ydqCrZPJdtJrFbWePkY5PYctoyiDMjAZez9CfFNOq-JVfNQEOqhJ4NzLDLE6zWgDkvwYTifR555vbn6Cg3Smj8PQHfl0YqR44d7N2MScVMXmgr", "state"=>"35a67818f749996b3e02d904f5e1caa7aececd1f3ca7fc86", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (1.0ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "halah.abuateeq@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 229ms (ActiveRecord: 21.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  
+app/models/user.rb:6:in `create_with_auth_and_hash'
+app/controllers/sessions_controller.rb:14:in `create_from_omniauth'
+Started GET "/" for 127.0.0.1 at 2018-02-14 14:59:27 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:59:39 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 14:59:39 +0800
+Started GET "/auth/facebook/callback?code=AQCXt0pSgR72o-d2ibAiURQ7W4wibddK6dSa-2LRPJqXRoS74okkYxw2RdqWwOPLjqnFdZq9a1t4hBHTNzb9dHag-qiVbsIhFg2RAR_mc9R2sObmYjZKY8hfhAKi4y-DEVeolb0ncDW7YDkbsJ1N9-LQFveRYBwm_P3Gl-W47PSYyYPcOep3a0nnyOiLtyKyuJ-gZHHIBeRY8qxadT90vOD5e4culaLzlp0dDbw_CiW_sOd8TIbnHXgn1fvS_YNtziRz5qhEvcEjKUX_WUbvzum9blSQUEn-vneadjml_SlK7fAtve3pWhbpviXa-h4xr7VO_4kWZpkzUNT4LsVIyAXJ&state=686b0c6a54bedb822e4c2e72375f0b266ec5cc0be4b5a140" for 127.0.0.1 at 2018-02-14 14:59:40 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQCXt0pSgR72o-d2ibAiURQ7W4wibddK6dSa-2LRPJqXRoS74okkYxw2RdqWwOPLjqnFdZq9a1t4hBHTNzb9dHag-qiVbsIhFg2RAR_mc9R2sObmYjZKY8hfhAKi4y-DEVeolb0ncDW7YDkbsJ1N9-LQFveRYBwm_P3Gl-W47PSYyYPcOep3a0nnyOiLtyKyuJ-gZHHIBeRY8qxadT90vOD5e4culaLzlp0dDbw_CiW_sOd8TIbnHXgn1fvS_YNtziRz5qhEvcEjKUX_WUbvzum9blSQUEn-vneadjml_SlK7fAtve3pWhbpviXa-h4xr7VO_4kWZpkzUNT4LsVIyAXJ", "state"=>"686b0c6a54bedb822e4c2e72375f0b266ec5cc0be4b5a140", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.5ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.7ms)
+
+
+  
+NameError (uninitialized constant User::SecuredRandom):
+  
+app/models/user.rb:8:in `create_with_auth_and_hash'
+app/controllers/sessions_controller.rb:14:in `create_from_omniauth'
+Started GET "/auth/facebook/callback?code=AQCXt0pSgR72o-d2ibAiURQ7W4wibddK6dSa-2LRPJqXRoS74okkYxw2RdqWwOPLjqnFdZq9a1t4hBHTNzb9dHag-qiVbsIhFg2RAR_mc9R2sObmYjZKY8hfhAKi4y-DEVeolb0ncDW7YDkbsJ1N9-LQFveRYBwm_P3Gl-W47PSYyYPcOep3a0nnyOiLtyKyuJ-gZHHIBeRY8qxadT90vOD5e4culaLzlp0dDbw_CiW_sOd8TIbnHXgn1fvS_YNtziRz5qhEvcEjKUX_WUbvzum9blSQUEn-vneadjml_SlK7fAtve3pWhbpviXa-h4xr7VO_4kWZpkzUNT4LsVIyAXJ&state=686b0c6a54bedb822e4c2e72375f0b266ec5cc0be4b5a140" for 127.0.0.1 at 2018-02-14 14:59:59 +0800
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"GUSRyY9pYIC"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"GUSRyY9pYIC"}}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+clearance (1.16.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 15:00:03 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:00:05 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:00:05 +0800
+Started GET "/auth/facebook/callback?code=AQAZode1PF3DZbROOoSSdmCqmy2kJRBiWRFfJJG8rV_HOz4BzVtulZ7nrVXpkGG_CpV_nz35T1jyXpqszesLiEvc0fTTsQ4jT7MgoMR9TvXwn5NKPO0yUdHUQBERNe5O1g7VmIPpq3OU2LpwSwCFAN1krKxA259uJOmMIQK8pStPqyW1zmfB0286DU7R_32-6qsFpGg9N4sDjhY8MA2aq0vLHuoxuXWnHqC1JPWcDVDgCt6A4oQOZOUfvaSgi0cGm6REdrn0NommM4PPXutQQp6rdPe8QVlpabkMQvCa1vp5jcxSMlPjHuT0mdCkOzSG0dxepYLuxj80uLeYKBNMKcjE&state=7424e2be3c712a218a553e1090213e5cb368fbdd3efb6559" for 127.0.0.1 at 2018-02-14 15:00:05 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQAZode1PF3DZbROOoSSdmCqmy2kJRBiWRFfJJG8rV_HOz4BzVtulZ7nrVXpkGG_CpV_nz35T1jyXpqszesLiEvc0fTTsQ4jT7MgoMR9TvXwn5NKPO0yUdHUQBERNe5O1g7VmIPpq3OU2LpwSwCFAN1krKxA259uJOmMIQK8pStPqyW1zmfB0286DU7R_32-6qsFpGg9N4sDjhY8MA2aq0vLHuoxuXWnHqC1JPWcDVDgCt6A4oQOZOUfvaSgi0cGm6REdrn0NommM4PPXutQQp6rdPe8QVlpabkMQvCa1vp5jcxSMlPjHuT0mdCkOzSG0dxepYLuxj80uLeYKBNMKcjE", "state"=>"7424e2be3c712a218a553e1090213e5cb368fbdd3efb6559", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.4ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "halah.abuateeq@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2018-02-14 07:00:06.705420"], ["updated_at", "2018-02-14 07:00:06.705420"], ["email", "halah.abuateeq@gmail.com"], ["encrypted_password", "$2a$10$p0CdBPOF1cBvSP5FOD0fsOaanG1XLNQIQqGI6rdD00cncKaJqqIVC"], ["remember_token", "0742aaf46a632a998c050ff58032c909f9ed64ab"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (73.3ms)[0m  [1m[32mINSERT INTO "authentications" ("uid", "token", "provider", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "103365700490104"], ["token", "EAARfU6d8mhIBADm6DB6u2Jatfie8C78ChmiauMQ1L4pIcd7vxHJVpRletDQn2JnPko9gOd7A9pCytco8ZCwQZCS2O6eZAKr2Q7ZC8xp0A5m73gZB6ZAVNvuJZB8zE0C7IXfdegZBGtnfnWwCKzt5aC5095EXqMOiHnSc9sxNb1uCcB9sTZAUfQY8f"], ["provider", "facebook"], ["user_id", 2], ["created_at", "2018-02-14 07:00:06.748379"], ["updated_at", "2018-02-14 07:00:06.748379"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 80.8ms)
+
+
+  
+NoMethodError (undefined method `edit_user_path' for #<SessionsController:0x00007fc982a7d7a0>
+Did you mean?  edit_user_password_path):
+  
+app/controllers/sessions_controller.rb:16:in `create_from_omniauth'
+Started GET "/auth/facebook/callback?code=AQAZode1PF3DZbROOoSSdmCqmy2kJRBiWRFfJJG8rV_HOz4BzVtulZ7nrVXpkGG_CpV_nz35T1jyXpqszesLiEvc0fTTsQ4jT7MgoMR9TvXwn5NKPO0yUdHUQBERNe5O1g7VmIPpq3OU2LpwSwCFAN1krKxA259uJOmMIQK8pStPqyW1zmfB0286DU7R_32-6qsFpGg9N4sDjhY8MA2aq0vLHuoxuXWnHqC1JPWcDVDgCt6A4oQOZOUfvaSgi0cGm6REdrn0NommM4PPXutQQp6rdPe8QVlpabkMQvCa1vp5jcxSMlPjHuT0mdCkOzSG0dxepYLuxj80uLeYKBNMKcjE&state=7424e2be3c712a218a553e1090213e5cb368fbdd3efb6559" for 127.0.0.1 at 2018-02-14 15:03:42 +0800
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Bdmu3ZEhday"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Bdmu3ZEhday"}}):
+  
+oauth2 (1.4.0) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.0) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.0) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+clearance (1.16.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-14 15:06:40 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:06:42 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:06:42 +0800
+Started GET "/auth/facebook/callback?code=AQC5kRrqdIgv3G5w-RjE64zCg5-wnJ_Wx7CHxn0zZ5uCZVgdMd82Yc-9bbrg8KiDpp2bbOddu2TjqRz6xisiSeoFAEOiprizbFDrZRSmSizYei-NbCI9QtmVe8VzvZKWnHRoSfXB2qkrYDQWKYYC0ox4ugE5MEwlBZrLJX8X3N-JVMhtxSdFiBrxRsFPOXpzI9Xo8VNHlbWlcmESaszxNMMWBducg-2uKNtIhjiCiZGYyb3sPK3z28ys9ozhJ-sp-eRrP0JjaP6UjGf8FL0wcTHyQe-eUxNJAUlGfLdOuudXqh6DzEFs38sqAmPnD8rQNmwkeTyb2LpeAr-yhdv3pLtj&state=4cda8b29a87d2dad379f418b3e700431231ee09af408dd68" for 127.0.0.1 at 2018-02-14 15:06:43 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQC5kRrqdIgv3G5w-RjE64zCg5-wnJ_Wx7CHxn0zZ5uCZVgdMd82Yc-9bbrg8KiDpp2bbOddu2TjqRz6xisiSeoFAEOiprizbFDrZRSmSizYei-NbCI9QtmVe8VzvZKWnHRoSfXB2qkrYDQWKYYC0ox4ugE5MEwlBZrLJX8X3N-JVMhtxSdFiBrxRsFPOXpzI9Xo8VNHlbWlcmESaszxNMMWBducg-2uKNtIhjiCiZGYyb3sPK3z28ys9ozhJ-sp-eRrP0JjaP6UjGf8FL0wcTHyQe-eUxNJAUlGfLdOuudXqh6DzEFs38sqAmPnD8rQNmwkeTyb2LpeAr-yhdv3pLtj", "state"=>"4cda8b29a87d2dad379f418b3e700431231ee09af408dd68", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.4ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBAAbEgtkUw92aozNRtZAQSahCxngucCuiBI9y4TvUs1SROKOQhBWesB4OHjNxHVWrL6FPJJ6Vjhv0DT9zzekjM5iH0bDTY4o4di3b3HuwMLcN9ezY8GaTTWtSQRwvrpMrCAs3oC4a7nxmeO4fDuQjXqI4V5VyFRPKszLgm"], ["updated_at", "2018-02-14 07:06:43.745783"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 15:06:43 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0742aaf46a632a998c050ff58032c909f9ed64ab"], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 15:08:30 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0742aaf46a632a998c050ff58032c909f9ed64ab"], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:09:21 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:09:22 +0800
+Started GET "/auth/facebook/callback?code=AQCKQOI5wDdnZRslhl9n9urZmmbfUPjARQnqflG87JW3O8L1Qbu90FQr0Mk3a1R4yEze87IDtNHmd5_8TPyZX4bbu-IJF8VHVCweaiUOkvpmeutoZ8p0euPWQBsg45XckhFWXzjKK4E_IJ_4Q7q-NadCVwQHHX4mMSPMmDoT3LgyJG-lYXvxCL8iL5p_WrcYeTFLAL7GzkGyaZISK3zawjMPYX3yT61UvESofhG5XZQb7XRXBMN4kSFxHM5EWnT9MDMwGPtr8lGOkfVq8Tb3EQPvVtZp4vSsMSw4U-WGrCzLp6Mj8aySdjzWbJhj6W-IJNFbgF7BiSKXM2Daw3mExEoi&state=4b9eed2151c3da65fc6f11ffaa3cf54e16c5c79d2a891c65" for 127.0.0.1 at 2018-02-14 15:09:22 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQCKQOI5wDdnZRslhl9n9urZmmbfUPjARQnqflG87JW3O8L1Qbu90FQr0Mk3a1R4yEze87IDtNHmd5_8TPyZX4bbu-IJF8VHVCweaiUOkvpmeutoZ8p0euPWQBsg45XckhFWXzjKK4E_IJ_4Q7q-NadCVwQHHX4mMSPMmDoT3LgyJG-lYXvxCL8iL5p_WrcYeTFLAL7GzkGyaZISK3zawjMPYX3yT61UvESofhG5XZQb7XRXBMN4kSFxHM5EWnT9MDMwGPtr8lGOkfVq8Tb3EQPvVtZp4vSsMSw4U-WGrCzLp6Mj8aySdjzWbJhj6W-IJNFbgF7BiSKXM2Daw3mExEoi", "state"=>"4b9eed2151c3da65fc6f11ffaa3cf54e16c5c79d2a891c65", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.5ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBAJMnD9UZCGbqXvASv04DiXXtQoMErpppp1lroaZAGPjdVkGGs3qxOZAGp0YJ8aDEoi0AmPhpadYPEc3DDMg6qpPNFvAq98L9rhsF2ZCkzkXiOChF7Y5mvP4x2vOMC7mPOg7GycuzdG5OC74ZC5ZA0OUIc3sjl3m2BZBNkHc7Fyo"], ["updated_at", "2018-02-14 07:09:22.992079"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 15:09:23 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0742aaf46a632a998c050ff58032c909f9ed64ab"], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2018-02-14 15:09:26 +0800
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0742aaf46a632a998c050ff58032c909f9ed64ab"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "afbd2f3d30b136c58057558fbf4112b0a4876fcc"], ["updated_at", "2018-02-14 07:09:26.232663"], ["id", 2]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 47ms (ActiveRecord: 42.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-14 15:09:26 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (33.5ms)
+  Rendered sessions/new.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 140ms (Views: 139.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:32:39 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 15:32:39 +0800
+Started GET "/auth/facebook/callback?code=AQAj15vYYgaCVeq0nMiInfWXjUmhglmmveRICp2sqc-TWngNSz2-A_Nu8lqI-LyLoi7uXFtle-W5wzNm5EI-iB1yJFl2I91CphIJlz9B6fmRf2_BBf84hWhm8KaPx223CDkKAegIHvJQxWfa27TQ91f_6-Ly4PtOag7NaUm4aOejzqShIr0VpXY7zoZyUtPSz1YgejDTbuEE4WUZK0MeeMEpjeWa1lPaJN9wqhyldPf7-PUsa7lTNS2UCXrtiKp0tM3IoRHj7leFap3YbE9zzm9nAddNccEMIHQ-jxHhxIrHrD2C5BrD-_-lJFsTeZVSkymQzHxD7PygYSINCZDHXtdf&state=f67385f2b1e22100f869f67f18d5d0bc1b3a04c2e99a6acd" for 127.0.0.1 at 2018-02-14 15:32:55 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQAj15vYYgaCVeq0nMiInfWXjUmhglmmveRICp2sqc-TWngNSz2-A_Nu8lqI-LyLoi7uXFtle-W5wzNm5EI-iB1yJFl2I91CphIJlz9B6fmRf2_BBf84hWhm8KaPx223CDkKAegIHvJQxWfa27TQ91f_6-Ly4PtOag7NaUm4aOejzqShIr0VpXY7zoZyUtPSz1YgejDTbuEE4WUZK0MeeMEpjeWa1lPaJN9wqhyldPf7-PUsa7lTNS2UCXrtiKp0tM3IoRHj7leFap3YbE9zzm9nAddNccEMIHQ-jxHhxIrHrD2C5BrD-_-lJFsTeZVSkymQzHxD7PygYSINCZDHXtdf", "state"=>"f67385f2b1e22100f869f67f18d5d0bc1b3a04c2e99a6acd", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.5ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBADIq5WwzSNbKBOXwQqcMnE4tsR8Ogml7M0rHI5t0rgefTZBwtHIkIZB9FXZAr5IpJhSvoFVg5k2MG6wwdhqwf7oGkFIoIoLSoPpsCvyeioBeQM58NsrFJNRaouoeg2b4HxT1Go9dZAlvvlZABErnorKG60j4v3ZAgUr2vStNj2"], ["updated_at", "2018-02-14 07:32:56.616193"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 15:32:56 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "afbd2f3d30b136c58057558fbf4112b0a4876fcc"], ["LIMIT", 1]]
+Completed 200 OK in 272ms (Views: 221.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2018-02-14 15:33:07 +0800
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "afbd2f3d30b136c58057558fbf4112b0a4876fcc"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "95d44bcb70e4a27963189a80bfbc9b6b6f66f1cf"], ["updated_at", "2018-02-14 07:33:07.849032"], ["id", 2]]
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 46ms (ActiveRecord: 41.1ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-14 15:33:07 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (3.9ms)
+  Rendered sessions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 85ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
