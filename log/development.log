@@ -1152,3 +1152,155 @@ Processing by Clearance::SessionsController#new as HTML
 Completed 200 OK in 85ms (Views: 84.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-14 18:07:33 +0800
+  [1m[35m (33.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (13.2ms)
+  Rendered sessions/new.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 466ms (Views: 457.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:07:35 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:07:36 +0800
+Started GET "/auth/facebook/callback?code=AQAObxKmXuBWSQ_OEq9pl1hPEQx2qhqkc8gbN6fAbW973NSheo-qQuHQkp31FQUJl4FgUNhYSp2_GrmVhFirvvPSxjGrnbxIiZVB8G5VGmzmtwqM9NGm8_2Ga_qn9PqqXFf-Yzbq3JIYM2RFZD__m7NFkwLfQj6nlgGNqdWV_hXKz44I1u3Jlh1Ad2M407OPS37saSPO4K5W0Ad8pWfifI0qNHHHFjZBFyNq_F9LA2OAaHdApnypQ75f26tRx7CzQNEhrFp6-wy9QT39NNEmEejVnp29DSWYW28CdBy5VMT4uw1rD7ZlnQ8RYTahIyZ6m9v0Do1BEYy9UOgLSs2GANBN29DEJpoShucctIr9bVTGeA&state=58f1c2191097e681cdc05a111f7691c5e87e252afe517422" for 127.0.0.1 at 2018-02-14 18:07:36 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQAObxKmXuBWSQ_OEq9pl1hPEQx2qhqkc8gbN6fAbW973NSheo-qQuHQkp31FQUJl4FgUNhYSp2_GrmVhFirvvPSxjGrnbxIiZVB8G5VGmzmtwqM9NGm8_2Ga_qn9PqqXFf-Yzbq3JIYM2RFZD__m7NFkwLfQj6nlgGNqdWV_hXKz44I1u3Jlh1Ad2M407OPS37saSPO4K5W0Ad8pWfifI0qNHHHFjZBFyNq_F9LA2OAaHdApnypQ75f26tRx7CzQNEhrFp6-wy9QT39NNEmEejVnp29DSWYW28CdBy5VMT4uw1rD7ZlnQ8RYTahIyZ6m9v0Do1BEYy9UOgLSs2GANBN29DEJpoShucctIr9bVTGeA", "state"=>"58f1c2191097e681cdc05a111f7691c5e87e252afe517422", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (1.0ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBAGCITQgSnDUVOtHfPPzq1tSpMR3gNQ4xoZBWLPuKt9iwbw3INQZBbSaSBCx6KD0YDuwsk74n50eTs47ct9jyqHZCSZCMjvzUpl637EyDioeWTZCpxsEiBNyDim3oIYCFMs7BW7DnEdvXhqzZBHPDIfe0pmRDMFHppAoxMVDdae"], ["updated_at", "2018-02-14 10:07:37.581926"], ["id", 1]]
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 363ms (ActiveRecord: 63.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 18:07:37 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "95d44bcb70e4a27963189a80bfbc9b6b6f66f1cf"], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 34.9ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2018-02-14 18:07:40 +0800
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "95d44bcb70e4a27963189a80bfbc9b6b6f66f1cf"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "ee314ed18a51c2ae11468921ccfd722abd240736"], ["updated_at", "2018-02-14 10:07:40.955542"], ["id", 2]]
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 48ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-14 18:07:41 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.9ms)
+  Rendered sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 52ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:07:42 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:07:42 +0800
+Started GET "/auth/facebook/callback?code=AQBF-RILw-1JSyUh4hNztILfQkBQk2eD-6J4sNHCUvUBZHXS8MCVB7C6JyJ0ET0bYyudNbtBagoeNJYXtISqzySCj8bW4_wZ0doj1NL8aUdTDeO_vBT2ouVpYpRSEANs9v-M0otye2wYJepd6T9xzMtNUYMDDa_7pGa2wCxTHgG5hXHDZrt4jAYS2XJH22x5manYW3QQcx9ofFreH2gLK-GPUfrAOpMxsUhJNkWWE03udHt9MX0_FKirG-4snu4oMd0bPfuXBjfh5djvT2hugKHhBdnpm5EHn4wrQok8nMe8QgM1wlU3SJsaEzQgsLgs9bZ5ldcaRn9TduCTSltjyuegiMyRad3hfjLlLXe45DJ0Vg&state=539a99724786934fe4069698048c7b5cc0037495b223cd17" for 127.0.0.1 at 2018-02-14 18:07:42 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQBF-RILw-1JSyUh4hNztILfQkBQk2eD-6J4sNHCUvUBZHXS8MCVB7C6JyJ0ET0bYyudNbtBagoeNJYXtISqzySCj8bW4_wZ0doj1NL8aUdTDeO_vBT2ouVpYpRSEANs9v-M0otye2wYJepd6T9xzMtNUYMDDa_7pGa2wCxTHgG5hXHDZrt4jAYS2XJH22x5manYW3QQcx9ofFreH2gLK-GPUfrAOpMxsUhJNkWWE03udHt9MX0_FKirG-4snu4oMd0bPfuXBjfh5djvT2hugKHhBdnpm5EHn4wrQok8nMe8QgM1wlU3SJsaEzQgsLgs9bZ5ldcaRn9TduCTSltjyuegiMyRad3hfjLlLXe45DJ0Vg", "state"=>"539a99724786934fe4069698048c7b5cc0037495b223cd17", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.5ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBAMoBd7nOBw6cQ9sKanIfw2OH4W8jgAyfZC4EisW6MVhapZAt8WgUnbJbQeDUME54WSRUI5yKCpQebKqiQ5TwqkxQPPbLF5kZB7JFdrWVv4fwLTMxJZBMD9iLaasrcegzZCD8lj8zBouLpfPCIXpt6OQW9YonZBEoscwD0likGp"], ["updated_at", "2018-02-14 10:07:43.396258"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 18:07:43 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "ee314ed18a51c2ae11468921ccfd722abd240736"], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:07:44 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:07:45 +0800
+Started GET "/auth/facebook/callback?code=AQBduDMYc9JWn-dAvps9Iliv_DlU6GCqpeaRsjPzcydv7YxTLK9zg-8eK7-v72pNryJeIWQNS1ekqMI_Jdq6VCZ1Zuh6UYqDL7mSVh-1rlRehIwoqEx5nfppeNESb7P-yV7anhW8JOwnzHom-uSzfWlMKSIR_u_YOya8yol8utVHqDaZ8Q5F4QI7HQtO6W9iOTV0SOhJ6DcYgdWuLxdvds_MzWGy6h7bSis9CsTLmQUphGRbPRww0_NALT2OiixGy30y4wikfhRQptxxZDaJiDwPQXmeYkAG222ZZVPKA7WUo5Y0Xqv80bQmSNK1iH32q_p5m0u_uqcZuN856mrf48vyTVo9gR_kzAVWvPvultLp3Q&state=34afd7950ddefdbd0c5dec55e07424c8405cdbcdb0359aa7" for 127.0.0.1 at 2018-02-14 18:07:45 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQBduDMYc9JWn-dAvps9Iliv_DlU6GCqpeaRsjPzcydv7YxTLK9zg-8eK7-v72pNryJeIWQNS1ekqMI_Jdq6VCZ1Zuh6UYqDL7mSVh-1rlRehIwoqEx5nfppeNESb7P-yV7anhW8JOwnzHom-uSzfWlMKSIR_u_YOya8yol8utVHqDaZ8Q5F4QI7HQtO6W9iOTV0SOhJ6DcYgdWuLxdvds_MzWGy6h7bSis9CsTLmQUphGRbPRww0_NALT2OiixGy30y4wikfhRQptxxZDaJiDwPQXmeYkAG222ZZVPKA7WUo5Y0Xqv80bQmSNK1iH32q_p5m0u_uqcZuN856mrf48vyTVo9gR_kzAVWvPvultLp3Q", "state"=>"34afd7950ddefdbd0c5dec55e07424c8405cdbcdb0359aa7", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.3ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBAAfeIf8DOoLy4FHM1UbqtPr1CuQfnJWPQjpyX3IORFqF92q8g7HJXEoKUQGZBjtKWpbJDLGw0LKZB36jy33lZCCxpigPqVibRdqZAHRDpp4HKuZAjh6qGxqEwcKoVUdi4YEr5yj0ZAUtGH6B2yYWepd0STD6EI7Ik64q17fPZAe"], ["updated_at", "2018-02-14 10:07:46.132760"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-14 18:07:46 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "ee314ed18a51c2ae11468921ccfd722abd240736"], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2018-02-14 18:07:47 +0800
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "ee314ed18a51c2ae11468921ccfd722abd240736"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "20a8e5f40317c92b6212b2844accaaad2be4d0e1"], ["updated_at", "2018-02-14 10:07:47.244583"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-14 18:07:47 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.0ms)
+  Rendered sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:08:02 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-14 18:08:02 +0800
+Started GET "/" for 127.0.0.1 at 2018-02-16 12:26:22 +0800
+  [1m[35m (33.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 654ms (Views: 585.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 12:27:57 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 12:28:07 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-16 12:28:13 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (50.8ms)
+  Rendered sessions/new.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 125ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-16 12:32:08 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
