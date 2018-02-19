@@ -1,15 +1,29 @@
 <div id="clearance" class="sign-up">
-  <h2><%= t(".title") %></h2>
+  <div class ="container">
+    <div class="row">
+        <div class ="col">
+        </div>
 
-  <%= form_for @user do |form| %>
-    <%= render partial: '/users/form', object: form %>
+      <div class="col">
+        <h2  style ="text-align: center"><%= t(".title") %></h2>
 
-    <div class="submit-field">
-      <%= form.submit %>
+        <%= form_for @user do |form| %>
+          <%= render partial: '/users/form', object: form %>
+          <div class="submit-field" style= "text-align: center">
+            <%= form.submit class: "btn btn-primary"%>
+          </div>
+          <br/>
+          <div class="other-links" style= "text-align: center">
+            <%= link_to t(".sign_in"), sign_in_path %>
+          </div>
+        <% end %>
+
+      </div>
+
+      <div class ="col">
+      </div>
+
     </div>
-
-    <div class="other-links">
-      <%= link_to t(".sign_in"), sign_in_path %>
-    </div>
-  <% end %>
+  </div>     
 </div>
+
