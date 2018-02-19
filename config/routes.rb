@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     resource :password,
       controller: "clearance/passwords",
       only: [:create, :edit, :update]
+    resources :listings
+
   end
+
 
   # get "/welcome" => "welcome#index", as: "welcome"
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"

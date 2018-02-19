@@ -1302,5 +1302,3 @@ Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.0ms)
-
-
