@@ -1,3 +1,4 @@
 class Listing < ApplicationRecord
-  has_many :bookings, :foreign_key => :booking_id
+  belongs_to :host, class_name: 'User'
+  has_many :bookings
 end
