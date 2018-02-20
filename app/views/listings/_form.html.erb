@@ -1,0 +1,12 @@
+
+
+<h1>New Listing</h1>
+
+<%= form_for([current_user, Listing.new]) do |form| %>
+    <%= form.label :title%>
+    <%= form.text_field :title %>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+
+    <%= form.submit %>
+<% end %>

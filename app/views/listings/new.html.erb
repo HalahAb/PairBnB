@@ -1,11 +1,2 @@
 
-<h1>New Listing</h1>
-
-<%= form_for(Listing.new, remote: true) do |form| %>
-    <%= form.label :title%>
-    <%= form.text_field :title %>
-    <%= form.label :Description %>
-    <%= form.text_field :Description %>
-
-    <%= form.submit %>
-  <% end %>
+<%= render partial: 'form' %>
