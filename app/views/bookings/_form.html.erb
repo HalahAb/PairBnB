@@ -1,0 +1,17 @@
+
+<h1>New Booking</h1>
+
+<%= render template: 'listings/show' %>
+
+<br/>
+
+<%= form_for([@listing, Booking.new]) do |form| %>
+    <%= form.label :start_date%>
+    <%= date_field(:booking, :start_date) %>
+
+    <%= form.label :end_date %>
+    <%= date_field(:booking, :end_date) %>
+
+
+    <%= form.submit %>
+<% end %>

@@ -1,25 +1,29 @@
 class ListingsController < ApplicationController
+  # show current user's listings
   def index
     @listings =current_user.listings
   end
 
+  # show a form to create a new listing
   def new
   end
 
+  # post and save a new listing to current user
   def create
     @listing = current_user.listings.new(listing_params)
     if @listing.save! 
-      redirect_to 'users/#{current_user.id}/listings'
+      redirect_to '/listings'
     else
       render 'new'
     end
   end
 
+  # show a listing by id
   def show
-    @listings = Listing.all
+    @listing = Listing.find(params[:id])
   end
 
-
+  
   private
 
   def listing_params

@@ -1,9 +1,12 @@
-<h1>
+<h1>Listings </h1>
 
   <%@listings.each do |listing|%>
   <br/>
-  listing Title: <%=listing.title%>
-  listing description: <%=listing.description%>
-  <%end%>
-
-</h1>
+  <hr>
+  <strong> Title:</strong> <%=listing.title%>
+  <br/>
+  <strong>Posted by Host_id: </strong><%=listing.host_id%>
+  <br/>
+  <strong> Description:</strong> <%=listing.description%>
+<%end%>
+<hr>
