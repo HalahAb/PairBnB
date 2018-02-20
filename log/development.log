@@ -10528,3 +10528,310 @@ Processing by BookingsController#show as HTML
 Completed 200 OK in 77ms (Views: 63.5ms | ActiveRecord: 4.4ms)
 
 
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 LIMIT $2[0m  [["host_id", 7], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 LIMIT $2[0m  [["host_id", 8], ["LIMIT", 11]]
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 17:47:24 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+Completed 400 Bad Request in 27ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: listing):
+  
+app/controllers/listings_controller.rb:44:in `listing_params'
+app/controllers/listings_controller.rb:23:in `edit'
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 17:48:52 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 17:59:14 +0800
+  [1m[35m (26.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 10.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial listings/_show, application/_show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/halah/src/Bootcamp/Back-end/Ruby on rails/PairBnB/app/views"
+  * "/Users/halah/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/clearance-1.16.1/app/views"
+):
+    1: 
+    2: <%= render partial: 'show' %>
+    3: <h1>Update Listing</h1>
+    4: 
+    5: <%= form_for(@listing) do |form| %>
+  
+app/views/listings/edit.html.erb:2:in `_app_views_listings_edit_html_erb__675289602621376878_70092566874380'
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 17:59:32 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (195.4ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `template' for #<#<Class:0x00007f7f651984d0>:0x00007f7f6680a1c8>):
+    1: 
+    2: <%= render template 'show' %>
+    3: <h1>Update Listing</h1>
+    4: 
+    5: <%= form_for(@listing) do |form| %>
+  
+app/views/listings/edit.html.erb:2:in `_app_views_listings_edit_html_erb__675289602621376878_70092578641300'
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 17:59:55 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 383ms (Views: 375.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/listings/8" for 127.0.0.1 at 2018-02-20 18:00:05 +0800
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "listing"=>{"title"=>"Test ", "description"=>"Another test listing???"}, "commit"=>"Update Listing", "id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 18:00:41 +0800
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 408ms (Views: 313.4ms | ActiveRecord: 12.1ms)
+
+
+Started PATCH "/listings/8" for 127.0.0.1 at 2018-02-20 18:00:47 +0800
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "listing"=>{"title"=>"Test ", "description"=>"Another test listing????"}, "commit"=>"Update Listing", "id"=>"8"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "listings" SET "description" = $1, "updated_at" = $2 WHERE "listings"."id" = $3[0m  [["description", "Another test listing????"], ["updated_at", "2018-02-20 10:00:47.058267"], ["id", 8]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 60ms (ActiveRecord: 29.7ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-20 18:00:47 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."host_id" = $1[0m  [["host_id", 8]]
+  Rendered listings/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 139ms (Views: 130.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-20 18:05:04 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."host_id" = $1[0m  [["host_id", 8]]
+  Rendered listings/index.html.erb within layouts/application (202.9ms)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `link_toEdit' for #<#<Class:0x00007f9c88ead428>:0x00007f9c88e9f698>
+Did you mean?  link_to_if):
+     8:   <strong>Posted by Host_id: </strong><%=listing.host_id%>
+     9:   <br/>
+    10:   <strong> Description:</strong> <%=listing.description%>
+    11:   <%= link_toEdit listing, edit_listing_path(listing) %>
+    12: 
+    13: <%end%>
+    14: <hr>
+  
+app/views/listings/index.html.erb:11:in `block in _app_views_listings_index_html_erb__1035249171950959534_70155144359620'
+app/views/listings/index.html.erb:3:in `_app_views_listings_index_html_erb__1035249171950959534_70155144359620'
+Started GET "/listings" for 127.0.0.1 at 2018-02-20 18:05:26 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."host_id" = $1[0m  [["host_id", 8]]
+  Rendered listings/index.html.erb within layouts/application (208.0ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `Edit' for #<#<Class:0x00007f9c88ead428>:0x00007f9c87f09be8>
+Did you mean?  exit):
+     8:   <strong>Posted by Host_id: </strong><%=listing.host_id%>
+     9:   <br/>
+    10:   <strong> Description:</strong> <%=listing.description%>
+    11:   <%= link_to Edit listing, edit_listing_path(listing) %>
+    12: 
+    13: <%end%>
+    14: <hr>
+  
+app/views/listings/index.html.erb:11:in `block in _app_views_listings_index_html_erb__1035249171950959534_70155136160380'
+app/views/listings/index.html.erb:3:in `_app_views_listings_index_html_erb__1035249171950959534_70155136160380'
+Started GET "/listings" for 127.0.0.1 at 2018-02-20 18:06:08 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."host_id" = $1[0m  [["host_id", 8]]
+  Rendered listings/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 79ms (Views: 71.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-20 18:06:26 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."host_id" = $1[0m  [["host_id", 8]]
+  Rendered listings/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 62ms (Views: 55.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/listings/1/edit" for 127.0.0.1 at 2018-02-20 18:06:28 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (5.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 131ms (Views: 68.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/listings/2/edit" for 127.0.0.1 at 2018-02-20 18:06:32 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 2], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 80ms (Views: 63.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/6/edit" for 127.0.0.1 at 2018-02-20 18:06:38 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 6], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 59.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/8/edit" for 127.0.0.1 at 2018-02-20 18:06:41 +0800
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mListing Load (4.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."host_id" = $1 AND "listings"."id" = $2 LIMIT $3[0m  [["host_id", 8], ["id", 8], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 96ms (Views: 71.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/listings/2/bookings/1/edit" for 127.0.0.1 at 2018-02-20 18:12:07 +0800
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 107ms (ActiveRecord: 9.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=1 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:24:in `edit'
+Started GET "/listings/2/bookings/1/edit" for 127.0.0.1 at 2018-02-20 18:12:28 +0800
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"2", "id"=>"1"}
+Started GET "/listings/2/bookings/1/edit" for 127.0.0.1 at 2018-02-20 18:15:21 +0800
+  [1m[36mUser Load (120.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (12.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 177630ms (ActiveRecord: 133.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=1 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:25:in `edit'
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (13.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 18346ms (ActiveRecord: 31.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=1 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:25:in `edit'
+Started GET "/listings/2/bookings/1/edit" for 127.0.0.1 at 2018-02-20 18:16:13 +0800
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 137ms (ActiveRecord: 12.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=1 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:25:in `edit'
+Started GET "/listings/1/bookings/2/edit" for 127.0.0.1 at 2018-02-20 18:16:23 +0800
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=2 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:25:in `edit'
+Started GET "/listings/1/bookings/2/edit" for 127.0.0.1 at 2018-02-20 18:17:08 +0800
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 29ms (ActiveRecord: 8.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=2 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:25:in `edit'
+Started GET "/listings/1/bookings/2/edit" for 127.0.0.1 at 2018-02-20 18:17:13 +0800
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=2 [WHERE "bookings"."guest_id" = $1]):
+  
+app/controllers/bookings_controller.rb:25:in `edit'
+Started GET "/listings/1/bookings/2/edit" for 127.0.0.1 at 2018-02-20 18:17:24 +0800
+Processing by BookingsController#edit as HTML
+  Parameters: {"listing_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "24b7081c35460f2adcfab80cf38a7abf54d9e24c"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 11]]
+  [1m[36mBooking Load (1.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 2], ["LIMIT", 1]]
