@@ -20,8 +20,9 @@ class BookingsController < ApplicationController
     end
   end
 
+
   def show
-     @listing = Listing.find(params[:listing_id])
+     @booking = Booking.find(params[:id])
   end
 
 

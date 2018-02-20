@@ -6,7 +6,7 @@
 
   <%@bookings.each do |booking|%>
    <hr>
-  <strong> Title:</strong> <%=booking.listing.title%>
+  <strong> Title:</strong><%= link_to booking.listing.title, listing_booking_path(booking.listing, booking)%>
   <br/>
   <strong>Posted by Host name: </strong><%=booking.listing.host.name%>
   <br/>
@@ -17,4 +17,4 @@
   <br/>
   <strong>End Date:</strong> <%=booking.end_date%>
   <%end%>
-   <hr>
+  <hr>
