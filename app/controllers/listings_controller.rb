@@ -31,8 +31,15 @@ class ListingsController < ApplicationController
     redirect_to listings_path
   end
 
+  def destroy
+    @listing = current_user.listings.find(params[:id])
+    if @listing.destroy
+      redirect_to '/listings'
+      else
+      'This listing does not exist'
+    end
 
-
+  end
 
 
   # show a listing by id

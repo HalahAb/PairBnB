@@ -9,6 +9,9 @@
   <br/>
   <strong> Description:</strong> <%=listing.description%>
   <%=link_to "Edit listing", edit_listing_path(listing)%>
+  <%= link_to 'Destroy', listing_path(listing),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
 
 <%end%>
 <hr>

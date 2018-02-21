@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
   #shows all bookings for the logged in guest
   def index
+    
     @bookings =current_user.bookings
+
   end
 
   #shows a form to add a booking for the list_id in the url.
@@ -21,11 +23,18 @@ class BookingsController < ApplicationController
   end
 
 
-
   def show
      @booking = Booking.find(params[:id])
   end
 
+  def destroy
+    @booking = current_user.bookings.find(params[:id])
+    if @booking.destroy
+      redirect_to listing_bookings_path
+      else
+      'This booking does not exist'
+    end
+  end
 
 
   private
