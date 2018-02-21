@@ -1,7 +1,8 @@
 class ListingsController < ApplicationController
   # show current user's listings
   def index
-    @listings =current_user.listings
+    @listings =Listing.all
+    # @listings =current_user.listings
   end
 
   # show a form to create a new listing
