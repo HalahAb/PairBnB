@@ -15,3 +15,8 @@
 
     <%= form.submit %>
 <% end %>
+
+<% if @booking_error %>
+<% flash[:notice] =    @booking.errors.messages[:start_date].first %>
+<% flash[:notice] =    @booking.errors.messages[:end_date].first %>
+<%end%>
