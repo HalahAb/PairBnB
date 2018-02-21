@@ -1,18 +1,27 @@
-<br/>
-<h2>Listings </h2>
 
-  <%@listings.each do |listing|%>
-  <hr>
-  <strong> Title:</strong> <%= link_to listing.title, listing_path(listing)%>
+<div class = "container">
   <br/>
-  <strong>Posted by Host_id: </strong><%=listing.host_id%>
-  <br/>
-  <strong> Description:</strong> <%=listing.description%>
-  <%=link_to "Edit listing", edit_listing_path(listing)%>
-  <%= link_to 'Destroy', listing_path(listing),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-  <%=link_to "Book Now!", new_listing_booking_path(listing)%>
+  <h2>Listings </h2>
+    <div class="card-group">
 
-<%end%>
-<hr>
+      <%@listings.each do |listing|%>
+        <div class="card" style = " padding: 2%">
+          <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        
+          <div class="card-body" >
+            <h5 class="card-title"><strong> Title:</strong>
+            <%= link_to listing.title, listing_path(listing)%></h5>
+            <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+            <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+            <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+            <hr>
+            <div style= "text-align: center">
+              <br/>
+              <%= button_to "view", listing_path(listing), :class=>"btn btn-info",:method => "get"%>
+            </div>
+          </div>
+        </div>
+      <%end%>
+
+  </div>
+</div>

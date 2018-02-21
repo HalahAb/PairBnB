@@ -1,8 +1,32 @@
-<hr>
-  <strong> Title:</strong> <%=@listing.title%>
+<div class= "container">
+  <hr>
+
+  <h3> <strong> Title:</strong> <%=@listing.title%></h3>
+  <h5> <small class="text-muted"><strong> Posted by </strong><%=@listing.host.email%></small></h5>
+
+    
+    
+    <strong> Description:</strong> <%=@listing.description%>
+    <br/>
+    <br/>
+    <div class ="row">
+      &nbsp &nbsp 
+
+      
+      <% if @listing.host == current_user %>
+        <%=button_to "Edit listing", edit_listing_path(@listing), :class=>"btn btn-warning",:method => "get"%>
+      &nbsp 
+        <%=button_to 'Destroy', listing_path(@listing), :class=>"btn btn-danger",
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+      <% else %>
+        <%=button_to "Book Now!", new_listing_booking_path(@listing),:class=>"btn btn-success",:method => "get"%>
+      <%end%>
+
+    </div>
+  <hr> 
+  <small class="text-muted"><strong> created at </strong><%=@listing.created_at%></small> 
   <br/>
-  <strong>Posted by Host name: </strong><%=@listing.host.name%>
+  <small class="text-muted"><strong> Updated at </strong><%=@listing.updated_at%></small> 
   <br/>
-  <strong> Description:</strong> <%=@listing.description%>
-  <br/>
-<hr> 
+</div>

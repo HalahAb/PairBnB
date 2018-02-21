@@ -5,18 +5,26 @@
 
 <br/>
 
-<%= form_for([@listing, Booking.new] ) do |form| %>
-    <%= form.label :start_date%>
-    <%= date_field(:booking, :start_date) %>
+<div class="container">
+  <%= form_for([@listing, Booking.new],:html => {:class => "form-control"} ) do |form| %>
 
-    <%= form.label :end_date %>
-    <%= date_field(:booking, :end_date) %>
+   
 
+      <%= form.label :start_date%>
+      <%= date_field(:booking, :start_date) %>
 
-    <%= form.submit %>
-<% end %>
+      <%= form.label :end_date %>
+      <%= date_field(:booking, :end_date) %>
+    
+
+      <%= form.submit %>
+
+  <% end %>
+</div>
 
 <% if @booking_error %>
 <% flash[:notice] =    @booking.errors.messages[:start_date].first %>
 <% flash[:notice] =    @booking.errors.messages[:end_date].first %>
 <%end%>
+
+

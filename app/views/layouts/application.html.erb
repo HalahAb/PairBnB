@@ -33,7 +33,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">PairBnB</a>
+    <a class="navbar-brand ml-5" href="#">PairBnB</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -42,32 +42,45 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
 
-      <ul class="navbar-nav ml-auto">
+
+
+      <ul class="navbar-nav ml-5">
+
         <% if signed_in? -%>
-        <li class="nav-item active">
+        <li class="nav-item active text-muted" style= "font-size: 11px;">
+          logged in as: 
+          <br/>
           <%= current_user.email %>
         </li>
         <li class="nav-item active">
+        <!-- insert drop down here --> 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Manage your account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="">View all your bookings </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href=""> View your listings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/listings/new">Become a host - Create New listing!</a>
+          </div>
+        </li>
+        <!-- end drop down -->
           <%= link_to t(".sign_out"), sign_out_path, method: :delete, class:"nav-link" %>
         </li>
         <% else -%>
           <li class="nav-item active">
             <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignIn">Sign in <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignUp">Sign up <span class="sr-only">(current)</span></a>
+        </li>
         <% end -%>
 
 
-        <li class="nav-item active">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignUp">Sign up <span class="sr-only">(current)</span></a>
-        </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
+     
 
 
       <div class="modal fade" id ="myModalSignIn">
@@ -216,7 +229,7 @@
 
 
 
-
+<!-- 
     <div id="header">
       <%= link_to "Sign in with Facebook", "/auth/facebook" %>
       
@@ -225,7 +238,7 @@
       <% else -%>
        <%= link_to t(".sign_in"), sign_in_path %>
       <% end -%>
-    </div>
+    </div> -->
 
     <div id="flash">
       <% flash.each do |key, value| -%>
