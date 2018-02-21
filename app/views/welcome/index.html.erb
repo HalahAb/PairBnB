@@ -1,2 +1,22 @@
 
-Welcome!
+<h1> Welcome! </h1>
+<h2> Recent Listings </h2>
+
+<h2>Listings </h2>
+
+  <%@listings.each do |listing|%>
+  <hr>
+  <strong> Title:</strong> <%= link_to listing.title, listing_path(listing)%>
+  <br/>
+  <strong>Posted by Host_id: </strong><%=listing.host_id%>
+  <br/>
+  <strong> Description:</strong> <%=listing.description%>
+  <%=link_to "Edit listing", edit_listing_path(listing)%>
+  <%= link_to 'Destroy', listing_path(listing),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+  <%=link_to "Book Now!", new_listing_booking_path(listing)%>
+
+<%end%>
+<hr>
+

@@ -5,7 +5,7 @@
 
 <br/>
 
-<%= form_for([@listing, Booking.new]) do |form| %>
+<%= form_for([@listing, Booking.new] ) do |form| %>
     <%= form.label :start_date%>
     <%= date_field(:booking, :start_date) %>
 
