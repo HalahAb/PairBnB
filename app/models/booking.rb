@@ -4,9 +4,14 @@ class Booking < ApplicationRecord
   has_one :host, through: :listing
   validates :start_date, presence: true
   validates :end_date, presence: true
-
-
   validate :uniqueness_of_date_range
+
+  
+
+
+
+
+
   private
   def uniqueness_of_date_range
     errors.add(:start_date, "Booking unavailable, Start date overlaps with existing booking. Please choose another date.") unless Booking.where("? >= start_date AND ? <= end_date",

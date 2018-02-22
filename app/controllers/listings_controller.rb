@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
 
   before_action :require_login, only: [:create,:update,:destroy]
   # show current user's listings
+ 
   def index
     @listings =Listing.all
     # @listings =current_user.listings
@@ -55,7 +56,7 @@ class ListingsController < ApplicationController
 
   def listing_params
     # {"first_name"=>"asdf", "last_name"=>"asdf"}
-    params.require(:listing).permit(:title, :description)
+    params.require(:listing).permit(:title, :description,:price,:location)
   end
 
 

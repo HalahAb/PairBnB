@@ -22501,3 +22501,1624 @@ Migrating to AddTotalPriceToBookings (20180222062804)
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(136846772350273440)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:31:48 +0800
+  [1m[35m (29.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (158.3ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 13.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:             
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong>
+    19:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    20:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    21:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    22:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:19:in `block (2 levels) in _app_views_listings_index_html_erb__212662299866746451_70244315636640'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__212662299866746451_70244315636640'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__212662299866746451_70244315636640'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:32:24 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (450.3ms)
+Completed 500 Internal Server Error in 490ms (ActiveRecord: 30.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listing_title' for #<#<Class:0x00007fc60f95af10>:0x00007fc6122d5cc8>
+Did you mean?  listing_url
+               listing_path):
+    16:             
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong>
+    19:                 <%= link_to listing_title, listing_path(listing)%></h5>
+    20:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    21:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    22:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:19:in `block (2 levels) in _app_views_listings_index_html_erb__212662299866746451_70244342608640'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__212662299866746451_70244342608640'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__212662299866746451_70244342608640'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:33:02 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:             
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong>
+    19:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    20:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    21:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    22:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:19:in `block (2 levels) in _app_views_listings_index_html_erb__212662299866746451_70244341753940'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__212662299866746451_70244341753940'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__212662299866746451_70244341753940'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:38:19 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (16545.3ms)
+Completed 500 Internal Server Error in 16615ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:             
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong>
+    19:                 <%= link_to listing.title, listing_path(listing.id)%></h5>
+    20:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    21:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    22:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:19:in `block (2 levels) in _app_views_listings_index_html_erb__212662299866746451_70244342265180'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__212662299866746451_70244342265180'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__212662299866746451_70244342265180'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:51:43 +0800
+  [1m[35m (32.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (178.4ms)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 14.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:             
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong>
+    19:                 <%= link_to listing.title, listing_path(listing.id)%></h5>
+    20:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    21:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    22:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:19:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110483050580'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110483050580'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110483050580'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:54:32 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (81.7ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 54.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    41:             
+    42:               <!-- <div class="card-body" > -->
+    43:                 <!-- <h5 class="card-title"><strong> Title:</strong> -->
+    44:                 <!-- <%= link_to listing.title, listing_path(listing.id)%></h5> -->
+    45:                 <!-- <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p> -->
+    46:                 <!-- <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p> -->
+    47:                 <!-- <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small>  -->
+  
+app/views/listings/index.html.erb:44:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110522901080'
+app/views/listings/index.html.erb:37:in `each'
+app/views/listings/index.html.erb:37:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110522901080'
+app/views/listings/index.html.erb:32:in `each'
+app/views/listings/index.html.erb:32:in `_app_views_listings_index_html_erb__2086646526861743653_70110522901080'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:55:33 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15:             
+    16:               <div class="card-body" >
+    17:                 <h5 class="card-title"><strong> Title:</strong>
+    18:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    19:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    20:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    21:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:18:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110523234200'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110523234200'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110523234200'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 15:57:14 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (71.4ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15:             
+    16:               <div class="card-body" >
+    17:                 <h5 class="card-title"><strong> Title:</strong>
+    18:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    19:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    20:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    21:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:18:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110489266880'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110489266880'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110489266880'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:04:03 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (69.3ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"listings", :id=>nil}, missing required keys: [:id]):
+    12:           <%group.each do |listing|%>
+    13:             <div class="card  w-50" style = " padding: 2%">
+    14:               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    15:             <%= button_to "view", listing_path(listing), :class=>"btn btn-info",:method => "get"%>
+    16:               <div class="card-body" >
+    17:                 <h5 class="card-title"><strong> Title:</strong> <%= link_to listing.title, listing_path(listing)%></h5>
+    18:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+  
+app/views/listings/index.html.erb:15:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110510879520'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110510879520'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110510879520'
+Started GET "/" for 127.0.0.1 at 2018-02-22 16:09:24 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 1766ms (Views: 1758.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:09:31 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15:             
+    16:               <div class="card-body" >
+    17:                 <h5 class="card-title"><strong> Title:</strong>
+    18:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    19:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    20:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    21:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:18:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110512640980'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110512640980'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110512640980'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:09:59 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (33.8ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15:             
+    16:               <div class="card-body" >
+    17:                 <h5 class="card-title"><strong> Title:</strong>
+    18:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    19:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    20:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    21:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:18:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110513000680'
+app/views/listings/index.html.erb:12:in `each'
+app/views/listings/index.html.erb:12:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110513000680'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110513000680'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:10:53 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (92478.3ms)
+Completed 500 Internal Server Error in 167685ms (ActiveRecord: 20.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong>
+    20:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:19:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110524910300'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110524910300'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110524910300'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:13:44 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+Started GET "/listings/listings/9" for 127.0.0.1 at 2018-02-22 16:16:18 +0800
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (168279.9ms)
+Completed 500 Internal Server Error in 168302ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.title, listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110531028280'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110531028280'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110531028280'
+  
+ActionController::RoutingError (No route matches [GET] "/listings/listings/9"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:16:41 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (30794.5ms)
+Completed 500 Internal Server Error in 30846ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.title, listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb__2086646526861743653_70110495798360'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb__2086646526861743653_70110495798360'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__2086646526861743653_70110495798360'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:17:27 +0800
+  [1m[35m (44.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (21310.4ms)
+Completed 500 Internal Server Error in 21382ms (ActiveRecord: 17.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.title, listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104041007460'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104041007460'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104041007460'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:17:54 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (38.2ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 11.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.title, listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104084469640'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104084469640'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104084469640'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:19:40 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"listings", :id=>nil}, missing required keys: [:id]):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to "title", listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104083718780'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104083718780'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104083718780'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:20:14 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to "title", listing_path(listing.id)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104040745040'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104040745040'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104040745040'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:21:43 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    10:             
+    11:               <div class="card-body" >
+    12:                 <h5 class="card-title"><strong> Title:</strong>
+    13:                 <%= link_to listing.title, listing_path(listing)%></h5>
+    14:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p
+    15:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>                <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+    16:                 <hr>
+  
+app/views/listings/index.html.erb:13:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104080378600'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104080378600'
+app/views/listings/index.html.erb:2:in `each'
+app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb___2390717055310950851_70104080378600'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:23:44 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered listings/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    3:   <br/>
+    4:   <h2>Listings </h2>
+    5: 
+    6: <%= link_to @listing.first.title, listing_path(listing)%>
+    7: 
+    8:  
+    9: 
+  
+app/views/listings/index.html.erb:6:in `_app_views_listings_index_html_erb___2390717055310950851_70104079428300'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:23:58 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" ORDER BY "listings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered listings/index.html.erb within layouts/application (358.5ms)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listing' for #<#<Class:0x00007f84bcf7fd30>:0x00007f84bdf3a1a8>
+Did you mean?  @listings):
+    3:   <br/>
+    4:   <h2>Listings </h2>
+    5: 
+    6: <%= link_to @listings.first.title, listing_path(listing)%>
+    7: 
+    8:  
+    9: 
+  
+app/views/listings/index.html.erb:6:in `_app_views_listings_index_html_erb___2390717055310950851_70104049637320'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:24:33 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered listings/index.html.erb within layouts/application (356.6ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listing' for #<#<Class:0x00007f84bcf7fd30>:0x00007f84be1f2c88>
+Did you mean?  @listings):
+    3:   <br/>
+    4:   <h2>Listings </h2>
+    5: 
+    6: <%= link_to "zft", listing_path(listing)%>
+    7: 
+    8:  
+    9: 
+  
+app/views/listings/index.html.erb:6:in `_app_views_listings_index_html_erb___2390717055310950851_70104051063520'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:24:59 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" ORDER BY "listings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 1110ms (Views: 1104.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 16:25:02 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 146ms (Views: 87.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:26:07 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (33.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.title, listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104086419020'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104086419020'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104086419020'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:26:59 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (351.7ms)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listings' for #<#<Class:0x00007f84bcf7fd30>:0x00007f84c1f82878>
+Did you mean?  @listings):
+    10: 
+    11:       <div class="row">
+    12: 
+    13:           <%listings.each do|listing|%>
+    14: 
+    15:             <div class="card  w-50" style = " padding: 2%">
+    16:               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+  
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104083339640'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104083339640'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:27:17 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 69.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:28:22 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.title, listing_path(listing)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104084949760'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104084949760'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104084949760'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:28:53 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for #<Listing:0x00007f84c1f88368>):
+    17:             
+    18:               <div class="card-body" >
+    19:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    20:                 <%= link_to listing.first.title, listing_path(listing.first)%>
+    21:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    22:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+    23:                 <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104087320000'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104087320000'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104087320000'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:29:42 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (291732.3ms)
+Completed 500 Internal Server Error in 291751ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    18:             
+    19:               <div class="card-body listing" >
+    20:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    21:                 <%= link_to listing.title, listing_path(listing)%>
+    22:              
+    23:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    24:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:21:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104051905300'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104051905300'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104051905300'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:34:43 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    18:             
+    19:               <div class="card-body listing" >
+    20:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    21:                 <%= link_to listing.title, listing_path(listing)%>
+    22:              
+    23:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    24:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:21:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104098473160'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104098473160'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104098473160'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:34:52 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    18:             
+    19:               <div class="card-body listing" >
+    20:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    21:                 <%= link_to listing.title, listing_path(listing)%>
+    22:              
+    23:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    24:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:21:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104097962200'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104097962200'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104097962200'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:35:13 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    18:             
+    19:               <div class="card-body" >
+    20:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    21:                 <%= link_to listing.title, listing_path(listing)%>
+    22:              
+    23:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    24:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:21:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104096464500'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104096464500'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104096464500'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:36:02 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (132532.7ms)
+Completed 500 Internal Server Error in 132552ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    19:               <div class="card-body" >
+    20:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    21:                 <%byebug%>
+    22:                 <%= link_to listing.title, listing_path(listing)%>
+    23:              
+    24:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    25:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:22:in `block (2 levels) in _app_views_listings_index_html_erb___2390717055310950851_70104080119820'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2390717055310950851_70104080119820'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2390717055310950851_70104080119820'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:38:19 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:39:43 +0800
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (150.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (327.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:40:18 +0800
+  [1m[35m (47.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (137.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 994ms (Views: 955.1ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:41:05 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (33.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 77.5ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:41:10 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 95.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:41:24 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (23.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 74.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:41:33 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 79.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:41:40 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (29.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 88.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:42:22 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (19.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:44:32 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:45:17 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (54.0ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: 
+    11:       <div class="row">
+    12: 
+    13:           <%@group.each do|listing|%>
+    14: 
+    15:             <div class="card  w-50" style = " padding: 2%">
+    16:               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+  
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2100130442320218918_70304200122780'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2100130442320218918_70304200122780'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:45:37 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    19:               <div class="card-body" >
+    20:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    21: 
+    22:                 <%= link_to listing.title,listing_path(listing)%>
+    23:              
+    24:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    25:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:22:in `block (2 levels) in _app_views_listings_index_html_erb___2100130442320218918_70304160223760'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2100130442320218918_70304160223760'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2100130442320218918_70304160223760'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:46:31 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    20:               <div class="card-body" >
+    21:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    22: 
+    23:                 <%= link_to listing.title,listing_path(listing)%>
+    24:              
+    25:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    26:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:23:in `block (2 levels) in _app_views_listings_index_html_erb___2100130442320218918_70304158640240'
+app/views/listings/index.html.erb:13:in `each'
+app/views/listings/index.html.erb:13:in `block in _app_views_listings_index_html_erb___2100130442320218918_70304158640240'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2100130442320218918_70304158640240'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:47:02 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    19: 
+    20:                 <%= link_to listing.title,listing_path(listing)%>
+    21:              
+    22:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    23:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2100130442320218918_70304158988460'
+app/views/listings/index.html.erb:11:in `each'
+app/views/listings/index.html.erb:11:in `block in _app_views_listings_index_html_erb___2100130442320218918_70304158988460'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2100130442320218918_70304158988460'
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:48:04 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered listings/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/halah/src/Bootcamp/Back-end/Ruby on rails/PairBnB/app/views/listings/index.html.erb:11: formal argument cannot be an instance variable
+...         group.each do|@listing|
+...                       ^~~~~~~~):
+  
+app/views/listings/index.html.erb:11: formal argument cannot be an instance variable
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:48:24 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17:               <div class="card-body" >
+    18:                 <h5 class="card-title"><strong> Title:</strong></h5>
+    19: 
+    20:                 <%= link_to listing.title,listing_path(listing)%>
+    21:              
+    22:                 <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+    23:                 <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+  
+app/views/listings/index.html.erb:20:in `block (2 levels) in _app_views_listings_index_html_erb___2100130442320218918_70304159494640'
+app/views/listings/index.html.erb:11:in `each'
+app/views/listings/index.html.erb:11:in `block in _app_views_listings_index_html_erb___2100130442320218918_70304159494640'
+app/views/listings/index.html.erb:7:in `each'
+app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb___2100130442320218918_70304159494640'
+Started GET "/listings/new" for 127.0.0.1 at 2018-02-22 16:58:52 +0800
+Processing by ListingsController#new as HTML
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (21.7ms)
+  Rendered listings/new.html.erb within layouts/application (49.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 103.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/listings" for 127.0.0.1 at 2018-02-22 16:59:30 +0800
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "listing"=>{"title"=>"This listing will fix broken layout", "price"=>"8941731", "location"=>"nowhereland", "description"=>"blah blah blah"}, "commit"=>"Create a listing"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Unpermitted parameters: :price, :location
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "listings" ("host_id", "title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["host_id", 8], ["title", "This listing will fix broken layout"], ["description", "blah blah blah"], ["created_at", "2018-02-22 08:59:30.751219"], ["updated_at", "2018-02-22 08:59:30.751219"]]
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 52ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 16:59:30 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 68.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/listings" for 127.0.0.1 at 2018-02-22 17:03:55 +0800
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "listing"=>{"title"=>"This might break things", "price"=>"8941731", "location"=>"nowhereland", "description"=>"Hoping it doesn't!"}, "commit"=>"Create a listing"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Unpermitted parameters: :price, :location
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("host_id", "title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["host_id", 8], ["title", "This might break things"], ["description", "Hoping it doesn't!"], ["created_at", "2018-02-22 09:03:55.360321"], ["updated_at", "2018-02-22 09:03:55.360321"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 15ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 17:03:55 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (17.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 95.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/listings" for 127.0.0.1 at 2018-02-22 17:06:57 +0800
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "listing"=>{"title"=>"Location location location", "price"=>"0", "location"=>"nowhereland", "description"=>"Free too!!"}, "commit"=>"Create a listing"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "listings" ("host_id", "title", "description", "location", "created_at", "updated_at", "price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["host_id", 8], ["title", "Location location location"], ["description", "Free too!!"], ["location", "nowhereland"], ["created_at", "2018-02-22 09:06:57.767505"], ["updated_at", "2018-02-22 09:06:57.767505"], ["price", 0]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 44ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 17:06:57 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 87.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:10:44 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:11:05 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 93ms (Views: 85.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings/10" for 127.0.0.1 at 2018-02-22 17:11:09 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 75ms (Views: 63.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings/11" for 127.0.0.1 at 2018-02-22 17:11:12 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 17:12:30 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:14:24 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 75ms (Views: 62.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:14:52 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:16:10 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 17:16:13 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 62.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 17:16:24 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (18.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 72.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-22 17:16:32 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (17.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:19:48 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 58ms (Views: 48.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:21:04 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (359.1ms)
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listing' for #<#<Class:0x00007fe1f1b33460>:0x00007fe1f0d0b888>
+Did you mean?  @listing):
+     7:     
+     8:     
+     9:     <strong> Description:</strong> <%=@listing.description%>
+    10:     <p class= "card-text"> <strong> Price per day:</strong> $ <%=listing.price%> </p>
+    11:     <br/>
+    12:     <br/>
+    13:     <div class ="row">
+  
+app/views/listings/show.html.erb:10:in `_app_views_listings_show_html_erb___4496466320369229124_70304192301860'
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:21:17 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 85ms (Views: 79.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:21:54 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (370.0ms)
+Completed 500 Internal Server Error in 389ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listing' for #<#<Class:0x00007fe1f1b33460>:0x00007fe1f0d51cc0>
+Did you mean?  @listing):
+    4:   <h3> <strong> Title:</strong> <%=@listing.title%></h3>
+    5:   <h5> <small class="text-muted"><strong> Posted by </strong><%=@listing.host.email%></small></h5>
+    6: 
+    7:     <p class= "card-text"> <strong> Location:</strong> <%=listing.location%> </p>
+    8:     <p class= "card-text"> <strong> Price per day:</strong> $ <%=@listing.price%> </p>
+    9:     <strong> Description:</strong> <%=@listing.description%>
+   10:     <br/>
+  
+app/views/listings/show.html.erb:7:in `_app_views_listings_show_html_erb___4496466320369229124_70304192436760'
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:22:04 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings/9" for 127.0.0.1 at 2018-02-22 17:22:44 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "e2cf56a255b17b438d1668e815fbddd7247c742e"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 1.6ms)
+
+
