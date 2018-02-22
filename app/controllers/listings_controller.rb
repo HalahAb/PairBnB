@@ -1,4 +1,6 @@
 class ListingsController < ApplicationController
+
+  before_action :require_login, only: [:create,:update,:destroy]
   # show current user's listings
   def index
     @listings =Listing.all

@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :require_login, only: [:create,:index,:show]
   #shows all bookings for the logged in guest
   def index
     
@@ -29,7 +30,6 @@ class BookingsController < ApplicationController
 
   def show
      @booking = Booking.find(params[:id])
-  
   end
 
   def destroy
