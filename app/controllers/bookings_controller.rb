@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
   def create
     @booking = current_user.bookings.new(booking_params)
     @booking.listing_id = params[:listing_id]
+    
     if @booking.save 
       redirect_to '/listings/'+params[:listing_id]+'/bookings'
     else
@@ -24,7 +25,6 @@ class BookingsController < ApplicationController
       render 'new'
     end
   end
-
 
   def show
      @booking = Booking.find(params[:id])

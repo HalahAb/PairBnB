@@ -1,11 +1,17 @@
 
+<div class ="container">
+  <br/>
+    <h1>New Listing</h1>
 
-<h1>New Listing</h1>
+  <div class="column">
+    <%= form_for( Listing.new, :html => {:class => "form-control"} )do |form| %>
+        <%= form.label :title, style: 'margin: 1%' %>
+        <%= form.text_field :title , class: 'form-control' %>
+        <%= form.label :description, style: 'margin: 1%'  %>
+        <%= form.text_area :description, class: 'form-control', size: '50x10'%>
+        <%= form.submit"Create a listing", class: "btn btn-primary mt-5" %>
+    <% end %>
+  </div>
 
-<%= form_for(Listing.new) do |form| %>
-    <%= form.label :title%>
-    <%= form.text_field :title %>
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-    <%= form.submit %>
-<% end %>
+
+</div>
