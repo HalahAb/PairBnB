@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     
     @bookings =current_user.bookings
 
+
   end
 
   #shows a form to add a booking for the list_id in the url.
@@ -28,6 +29,7 @@ class BookingsController < ApplicationController
 
   def show
      @booking = Booking.find(params[:id])
+  
   end
 
   def destroy
