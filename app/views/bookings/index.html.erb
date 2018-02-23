@@ -1,15 +1,33 @@
 <div class= "container">
   <hr>
     <h3> <strong> My Bookings </strong> </h3>
+    <hr>
 
     <% if @bookings.first %>
       <%@bookings.each do |booking|%>
-       <hr>
-      <strong> Title:</strong><%= link_to booking.listing.title, listing_booking_path(booking.listing, booking)%>
+
+      <strong> Title: </strong><%= link_to booking.listing.title, listing_booking_path(booking.listing, booking)%>
       <br/>
       <small class="text-muted"><strong> Posted by </strong><%=booking.listing.host.email%></small>
       <br/>
-      <strong> Description:</strong> <%=booking.listing.description%>
+      <div class ="container">
+        <div class ="row mt-0">
+          <strong> Description: </strong> <%=booking.listing.description%>
+        </div>
+        <div class ="row mt-0">
+          <strong> Price per day: </strong> &nbsp $<%=booking.listing.price%> </p>
+        </div>
+
+        <div class ="row mt-0">
+          <strong> Total price: </strong> &nbsp $<%=booking.total_price%> </p>
+        </div>
+
+        <div class ="row mt-0">
+          <strong> Booking dates:  </strong> <p> &nbsp [<%=booking.start_date%>] to [<%=booking.end_date%>] </p>
+        </div>
+      </div>
+
+      
       <br/>
       <br/>
 
