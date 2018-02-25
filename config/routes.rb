@@ -6,11 +6,15 @@ Rails.application.routes.draw do
     resource :password,
       controller: "clearance/passwords",
       only: [:create, :edit, :update]
-
   end
+
   resources :listings do
     resources :bookings
   end
+
+  get "/users/current_user/bookings" => "bookings#user_bookings", as: "user_bookings"
+  get "/users/:user_id/listings" => "listings#user_listings", as: "user_listings"
+
 
   # get "/welcome" => "welcome#index", as: "welcome"
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"

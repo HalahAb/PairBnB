@@ -1,0 +1,53 @@
+<div class= "container">
+  <hr>
+    <h3> <strong> My Bookings </strong> </h3>
+    <hr>
+
+    <% if @bookings.first %>
+      <%@bookings.each do |booking|%>
+
+      <strong> Title: </strong><%= link_to booking.listing.title, listing_booking_path(booking.listing, booking)%>
+      <br/>
+      <small class="text-muted"><strong> Posted by </strong><%=booking.listing.host.email%></small>
+      <br/>
+      <div class ="container">
+        <div class ="row mt-0">
+          <strong> Description: </strong> <%=booking.listing.description%>
+        </div>
+        <div class ="row mt-0">
+          <strong> Price per day: </strong> &nbsp $<%=booking.listing.price%> </p>
+        </div>
+
+        <div class ="row mt-0">
+          <strong> Total price: </strong> &nbsp $<%=booking.total_price%> </p>
+        </div>
+
+        <div class ="row mt-0">
+          <strong> Booking dates:  </strong> <p> &nbsp [<%=booking.start_date%>] to [<%=booking.end_date%>] </p>
+        </div>
+      </div>
+
+      
+      <br/>
+      <br/>
+
+
+      <small class="text-muted"><strong> created at </strong>Start Date:</strong> <%=booking.start_date%> </small>
+      <br/>
+      <small class="text-muted"><strong> Updated at </strong><%=booking.end_date%></small>
+
+      <br/>
+      <br/>
+
+     
+      <%= button_to 'Destroy', listing_booking_path(booking.listing, booking), :class=>"btn btn-danger",
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+
+      <hr>
+    <%end%>
+
+    <% else %>
+    <p> Sorry you don't have any bookings to show </p>
+    <%end%>
+</div>

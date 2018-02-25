@@ -1,0 +1,41 @@
+
+<div class = "container">
+  <br/>
+  <h2>My Listings </h2>
+
+  <div class="column">
+ <% @listings.in_groups_of(2,false).each do|group| %> 
+
+      <div class="row">
+
+          <%group.each do|listing|%>
+
+            <div class="card  w-50" style = " padding: 2%">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+
+            
+              <div class="card-body" >
+                <h5 class="card-title"><strong> Title:</strong></h5>
+
+                <%= link_to listing.title,listing_path(listing)%>
+             
+                <p><small class="text-muted"><strong>Posted by Host: </strong><%=listing.host.email%></small></p>
+                <p class= "card-text"> <strong> Location:</strong> <%=listing.location%> </p>
+                <p class= "card-text"> <strong> Description:</strong> <%=listing.description%> </p>
+                <small class="text-muted"><strong> created at </strong><%=listing.created_at%></small> 
+                <hr>
+                <div style= "text-align: center">
+                  <br/>
+                  <%= button_to "view", listing_path(listing), :class=>"btn btn-info",:method => "get"%>
+                </div>
+              </div>
+            </div>
+          <%end%>    
+      </div>
+    
+    <%end%> 
+  </div>
+
+
+
+</div>
