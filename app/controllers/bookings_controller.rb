@@ -7,12 +7,10 @@ class BookingsController < ApplicationController
 
   end
 
-
-
   #shows all bookings for the logged in guest
   def index
     @listing = Listing.find(params[:listing_id])
-    @bookings =listing.bookings
+    @bookings =@listing.bookings
   end
 
   #shows a form to add a booking for the list_id in the url.

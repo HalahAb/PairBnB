@@ -7,27 +7,29 @@
 
 <br/>
 
+<% if current_user.id != @listing.host_id %>
+  <div class="container">
+    <%= form_for([@listing, Booking.new],:html => {:class => "form-control form-inline"} ) do |form| %>
 
-<div class="container">
-  <%= form_for([@listing, Booking.new],:html => {:class => "form-control form-inline"} ) do |form| %>
+     
 
-   
+        
+          <%= form.label :start_date, style: 'margin: 1%'%>
+          <%= date_field(:booking, :start_date, class: 'form-control mb-2 mr-sm-2') %>
+        
+
+
+        
+          <%= form.label :end_date, style: 'margin: 1%' %>
+          <%= date_field(:booking, :end_date, class: 'form-control mb-2 mr-sm-2') %>
+        
+
+       <%= form.submit "Reserve!", class: "btn btn-primary mb-2", style: 'margin-left: 5%'  %>
 
       
-        <%= form.label :start_date, style: 'margin: 1%'%>
-        <%= date_field(:booking, :start_date, class: 'form-control mb-2 mr-sm-2') %>
-      
+    <% end %>
+<% end %>
 
-
-      
-        <%= form.label :end_date, style: 'margin: 1%' %>
-        <%= date_field(:booking, :end_date, class: 'form-control mb-2 mr-sm-2') %>
-      
-
-     <%= form.submit "Reserve!", class: "btn btn-primary mb-2", style: 'margin-left: 5%'  %>
-
-    
-  <% end %>
 </div>
 <div class ="container">
   <div>
