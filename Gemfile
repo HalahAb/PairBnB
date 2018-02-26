@@ -31,6 +31,7 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "font-awesome-rails"
 gem 'carrierwave', '~> 1.0'
+gem 'braintree'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
