@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :listings, foreign_key: :host_id
   has_many :bookings, foreign_key: :guest_id
 
+  mount_uploader :profile_image, ProfileImageUploader
+
   def self.create_with_auth_and_hash(authentication, auth_hash)
     user = self.create!(
       name: auth_hash["name"],
