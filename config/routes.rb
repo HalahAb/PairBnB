@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'braintree/new'
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
   root "welcome#index"
@@ -15,7 +17,8 @@ Rails.application.routes.draw do
   get "/users/current_user/bookings" => "bookings#user_bookings", as: "user_bookings"
   get "/users/:user_id/listings" => "listings#user_listings", as: "user_listings"
 
-  get "/listings/:listing_id/bookings/:id/submit_payment" => "bookings#pay", as: "submit_payment"
+  get "/listings/:listing_id/bookings/:id/new_payment" => "bookings#pay", as: "new_payment"
+  post '/listings/:listing_id/bookings/:id/submit_payment'=> "bookings#submit_payment", as: "submit_payment"
 
 
   # get "/welcome" => "welcome#index", as: "welcome"

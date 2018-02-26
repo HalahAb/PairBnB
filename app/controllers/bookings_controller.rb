@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :require_login, only: [:create,:index,:show,:user_bookings]
+  before_action :require_login, only: [:create,:index,:show,:user_bookings, :pay, :submit_pay]
   
   def user_bookings
 
@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
     @booking.listing_id = params[:listing_id]
     
     if @booking.save 
-      redirect_to '/listings/'+params[:listing_id]+'/bookings'
+      redirect_to '/listings/'+params[:listing_id]+'/bookings'+'/'+ @booking.id.to_s+'/new_payment'
     else
       @listing = Listing.find(params[:listing_id])
       @booking_error = true
@@ -38,9 +38,29 @@ class BookingsController < ApplicationController
   end
 
  def pay
+     @client_token = Braintree::ClientToken.generate
      @booking = Booking.find(params[:id])
   end
 
+  def submit_payment
+    # ??
+    @booking = current_user.bookings.where([ "id = ?", params[:id] ]).first
+    nonce_from_the_client = params[:checkout_form][:payment_method_nonce]
+
+    result = Braintree::Transaction.sale(
+     :amount => @booking.total_price, #this is currently hardcoded
+     :payment_method_nonce => nonce_from_the_client,
+     :options => {
+        :submit_for_settlement => true
+      }
+     )
+
+    if result.success?
+      redirect_to listing_booking_path, :flash => { :success => "Transaction successful!" }
+    else
+      redirect_to listing_booking_path, :flash => { :error => "Transaction failed. Please try again." }
+    end
+  end
 
 
 

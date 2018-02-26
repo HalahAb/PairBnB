@@ -1,6 +1,13 @@
 <div class= "container">
   <hr>
 
+<% flash.each do |key, value| %>
+  <%if key =="error"%>
+   <% key ="danger"%>
+  <%end%>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+
+<% end %>
 
   <h3> <strong> Title: </strong><%= link_to @booking.listing.title, listing_path(@booking.listing, @booking)%></h3>
   <h5> <small class="text-muted"><strong> Posted by </strong><%=@booking.listing.host.email%></small></h5>

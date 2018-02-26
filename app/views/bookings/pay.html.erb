@@ -3,11 +3,11 @@
  
   <div class ="row">
 
-    <div class ="col-4">
+    <div class ="col-5">
     <h3> <strong> Submit Payment </strong> </h3>
     </div>
 
-     <div class= "col ml-5">
+     <div class= "col">
     <h3> <strong> Bookings Details</strong> </h3>
     </div>
 
@@ -18,10 +18,16 @@
     </div>
 
     <div class="column">
+      <div class = "ml-4">
+    <strong>Payment due</strong>&nbsp $<%=@booking.total_price%>
+  </div>
+
     <%= render partial: 'payment_form' %>
     </div>
 
     <div class ="column">
+      <br/>
+      <br/>
       <strong> Title: </strong><%= link_to @booking.listing.title, listing_booking_path(@booking.listing, @booking)%>
 
       <p><small class="text-muted"><strong> Posted by </strong><%=@booking.listing.host.email%></small></p>

@@ -27338,3 +27338,1577 @@ Processing by BookingsController#pay as HTML
 Completed 200 OK in 72ms (Views: 64.4ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:05:17 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (4.2ms)
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (72.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1939ms (Views: 408.0ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:05:22 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.9ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 962ms (Views: 61.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:05:41 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.4ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1200ms (Views: 64.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:06:01 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 989ms (Views: 67.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:07:44 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.2ms)
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (49.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1260ms (Views: 98.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:07:55 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.1ms)
+  Rendered bookings/pay.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 987ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `listing' for nil:NilClass):
+    22:     </div>
+    23: 
+    24:     <div class ="column">
+    25:       <strong> Title: </strong><%= link_to @booking.listing.title, listing_booking_path(@booking.listing, @booking)%>
+    26: 
+    27:       <p><small class="text-muted"><strong> Posted by </strong><%=@booking.listing.host.email%></small></p>
+    28: 
+  
+app/views/bookings/pay.html.erb:25:in `_app_views_bookings_pay_html_erb___2765970342548704454_70315195932700'
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:08:06 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.0ms)
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (51.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1102ms (Views: 102.9ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:11:06 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1308ms (Views: 62.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:12:46 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1051ms (Views: 62.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:12:50 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 989ms (Views: 72.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:13:13 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.8ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 987ms (Views: 63.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:13:26 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1274ms (Views: 56.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:14:00 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (12.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1063ms (Views: 63.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:14:43 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.2ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1136ms (Views: 62.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:15:09 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1183ms (Views: 59.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:15:16 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.4ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1035ms (Views: 64.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:18:23 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (4.2ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (83.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1757ms (Views: 425.1ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:18:26 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1003ms (Views: 60.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:22:32 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.4ms)
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (45.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1219ms (Views: 86.4ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:22:41 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.1ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1025ms (Views: 63.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:22:48 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 2305ms (Views: 68.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:23:45 +0800
+  [1m[35m (33.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (16.6ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (164.0ms)
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:23:47 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.5ms)
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 3077ms (Views: 1790.0ms | ActiveRecord: 15.7ms)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1429ms (Views: 103.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 15:23:53 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 93.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:23:58 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.4ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1162ms (Views: 77.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:25:01 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1081ms (Views: 61.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:25:04 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 979ms (Views: 77.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:26:07 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.2ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1073ms (Views: 137.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:26:40 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.7ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1164ms (Views: 104.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:27:03 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.0ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1119ms (Views: 125.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:27:18 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (8.3ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1029ms (Views: 67.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:27:46 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1023ms (Views: 55.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:28:04 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1393ms (Views: 62.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:28:48 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.7ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1073ms (Views: 60.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:29:24 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1187ms (Views: 65.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:29:45 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 973ms (Views: 63.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 15:32:21 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 69.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 15:32:21 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 73.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-26 15:32:24 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (23.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 75.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/11" for 127.0.0.1 at 2018-02-26 15:32:34 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 100ms (Views: 60.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listings/15" for 127.0.0.1 at 2018-02-26 15:32:40 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 68ms (Views: 60.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-26 15:32:51 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (5.2ms)
+  Rendered bookings/_form.html.erb (55.8ms)
+  Rendered bookings/new.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 171ms (Views: 125.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:33:12 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1354ms (Views: 64.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:52:22 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"bb3375e6-3e00-0a6d-63e9-d0e9ee423ca6"}, "listing_id"=>"9", "id"=>"7"}
+Redirected to http://localhost:3000/listings/9/bookings/7/new_payment
+Completed 302 Found in 1806ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:52:24 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.4ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (42.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1280ms (Views: 105.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/current_user/bookings" for 127.0.0.1 at 2018-02-26 15:53:13 +0800
+Processing by BookingsController#user_bookings as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendering bookings/user_bookings.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1[0m  [["guest_id", 8]]
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/user_bookings.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 147ms (Views: 75.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:54:09 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1237ms (Views: 59.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:54:37 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (3.1ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (14.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 985ms (Views: 64.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:54:58 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.5ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1113ms (Views: 59.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:55:14 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.4ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 2110ms (Views: 63.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:55:43 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 922ms (Views: 62.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:56:02 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 939ms (Views: 73.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:56:18 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.7ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1074ms (Views: 66.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:56:38 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1020ms (Views: 62.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:56:52 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1245ms (Views: 60.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:57:04 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.5ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1052ms (Views: 65.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:57:17 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 976ms (Views: 62.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:57:26 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1119ms (Views: 62.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:57:55 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1062ms (Views: 61.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 15:59:05 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (3.3ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (41.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 1213ms (Views: 90.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 15:59:21 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"6abbf962-210f-0b80-583c-de71fae05a14"}, "listing_id"=>"9", "id"=>"7"}
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 11]]
+  [1m[36mBooking Load (22.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (booking_id = 7) ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = 7) ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = 7) LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 11]]
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = 7) ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/9/bookings/7/new_payment
+Completed 302 Found in 2227123ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 16:36:28 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (21.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (38.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (1382.7ms)
+Completed 200 OK in 5671ms (Views: 3458.0ms | ActiveRecord: 335.8ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 16:36:58 +0800
+  [1m[35m (30.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 16:36:59 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (14.9ms)
+  Rendered bookings/_payment_form.html.erb (13.7ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (94.2ms)
+  Rendered bookings/pay.html.erb within layouts/application (97.9ms)
+Completed 200 OK in 3467ms (Views: 2200.4ms | ActiveRecord: 20.8ms)
+
+
+Completed 200 OK in 4034ms (Views: 2205.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/listings/9/bookings/7/new_payment" for 127.0.0.1 at 2018-02-26 16:37:03 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"9", "id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 946ms (Views: 72.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/listings/9/bookings/7/submit_payment" for 127.0.0.1 at 2018-02-26 16:38:43 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listings/9/bookings/7/submit_payment"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-26 16:44:05 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"", "end_date"=>""}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE (NULL >= start_date AND NULL <= end_date)[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE (NULL >= start_date AND NULL <= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE (NULL <= start_date AND NULL >= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (8.8ms)
+  Rendered bookings/_form.html.erb (75.0ms)
+  Rendered bookings/new.html.erb within layouts/application (99.1ms)
+Completed 200 OK in 555ms (Views: 421.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-26 16:44:28 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-01", "end_date"=>"2018-02-08"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-01' >= start_date AND '2018-03-01' <= end_date)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-08' >= start_date AND '2018-02-08' <= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-01' <= start_date AND '2018-02-08' >= end_date)[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (3.3ms)
+  Rendered bookings/_form.html.erb (11.3ms)
+  Rendered bookings/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 102ms (Views: 80.7ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-26 16:44:43 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-15", "end_date"=>"2018-02-23"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-15' >= start_date AND '2018-03-15' <= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-23' >= start_date AND '2018-02-23' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-15' <= start_date AND '2018-02-23' >= end_date)[0m
+  [1m[35mSQL (48.9ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 15], ["guest_id", 8], ["start_date", "2018-03-15"], ["end_date", "2018-02-23"], ["created_at", "2018-02-26 08:44:43.379346"], ["updated_at", "2018-02-26 08:44:43.379346"], ["total_price", -10000]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 74ms (ActiveRecord: 58.9ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-26 16:44:43 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 144ms (Views: 96.4ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/listings/15/bookings/13" for 127.0.0.1 at 2018-02-26 16:45:02 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (1.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-26 16:45:02 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (1.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 88ms (Views: 75.4ms | ActiveRecord: 4.2ms)
+
+
+Started DELETE "/listings/15/bookings/10" for 127.0.0.1 at 2018-02-26 16:45:21 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"10"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-26 16:45:21 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 74ms (Views: 64.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 16:45:24 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 64.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-26 16:45:25 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 71.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/13" for 127.0.0.1 at 2018-02-26 16:45:32 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/13/bookings/new" for 127.0.0.1 at 2018-02-26 16:45:35 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (5.0ms)
+  Rendered bookings/_form.html.erb (11.5ms)
+  Rendered bookings/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 79ms (Views: 69.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listings/13/bookings/new" for 127.0.0.1 at 2018-02-26 16:54:09 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (23.3ms)
+  Rendered bookings/_form.html.erb (104.8ms)
+  Rendered bookings/new.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 955ms (Views: 880.1ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:54:18 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-02-08", "end_date"=>"2018-02-09"}, "commit"=>"Reserve!", "listing_id"=>"13"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-08' >= start_date AND '2018-02-08' <= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-09' >= start_date AND '2018-02-09' <= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-08' <= start_date AND '2018-02-09' >= end_date)[0m
+  [1m[35mSQL (24.0ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 13], ["guest_id", 8], ["start_date", "2018-02-08"], ["end_date", "2018-02-09"], ["created_at", "2018-02-26 08:54:18.200769"], ["updated_at", "2018-02-26 08:54:18.200769"], ["total_price", 500]]
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/13/bookings/#{@booking.id}payment_new
+Completed 302 Found in 88ms (ActiveRecord: 70.1ms)
+
+
+Started GET "/listings/13/bookings/" for 127.0.0.1 at 2018-02-26 16:54:18 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 13]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 113ms (Views: 72.0ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/listings/13/bookings/14" for 127.0.0.1 at 2018-02-26 16:54:49 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"13", "id"=>"14"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/13/bookings
+Completed 302 Found in 44ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:54:49 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 101ms (Views: 65.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/listings/13/bookings/" for 127.0.0.1 at 2018-02-26 16:54:53 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 57ms (Views: 49.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/13/bookings/new" for 127.0.0.1 at 2018-02-26 16:54:56 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (6.4ms)
+  Rendered bookings/_form.html.erb (13.3ms)
+  Rendered bookings/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:55:03 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-02-09", "end_date"=>"2018-02-16"}, "commit"=>"Reserve!", "listing_id"=>"13"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-09' >= start_date AND '2018-02-09' <= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-16' >= start_date AND '2018-02-16' <= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-09' <= start_date AND '2018-02-16' >= end_date)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 13], ["guest_id", 8], ["start_date", "2018-02-09"], ["end_date", "2018-02-16"], ["created_at", "2018-02-26 08:55:03.821969"], ["updated_at", "2018-02-26 08:55:03.821969"], ["total_price", 3500]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/13/bookings/#{@booking.id}/new_payment
+Completed 302 Found in 28ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/listings/13/bookings/" for 127.0.0.1 at 2018-02-26 16:55:03 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 13]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 77ms (Views: 66.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/listings/13/bookings/" for 127.0.0.1 at 2018-02-26 16:56:05 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 13]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 141ms (Views: 83.2ms | ActiveRecord: 17.5ms)
+
+
+Started POST "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:56:17 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-02-14", "end_date"=>"2018-02-28"}, "commit"=>"Reserve!", "listing_id"=>"13"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-14' >= start_date AND '2018-02-14' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-28' >= start_date AND '2018-02-28' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-14' <= start_date AND '2018-02-28' >= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (4.6ms)
+  Rendered bookings/_form.html.erb (14.3ms)
+  Rendered bookings/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 122ms (Views: 94.0ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:56:26 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-08", "end_date"=>"2018-03-24"}, "commit"=>"Reserve!", "listing_id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-08' >= start_date AND '2018-03-08' <= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-24' >= start_date AND '2018-03-24' <= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-08' <= start_date AND '2018-03-24' >= end_date)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 13], ["guest_id", 8], ["start_date", "2018-03-08"], ["end_date", "2018-03-24"], ["created_at", "2018-02-26 08:56:26.565983"], ["updated_at", "2018-02-26 08:56:26.565983"], ["total_price", 8000]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 4.0ms)
+
+
+  
+TypeError (no implicit conversion of Integer into String):
+  
+app/controllers/bookings_controller.rb:27:in `+'
+app/controllers/bookings_controller.rb:27:in `create'
+Started GET "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:56:48 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 13]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 127ms (Views: 83.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:56:51 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 13]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 77ms (Views: 69.6ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/listings/13/bookings/15" for 127.0.0.1 at 2018-02-26 16:56:53 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"13", "id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/13/bookings
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:56:53 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 13]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 88ms (Views: 79.7ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/listings/13/bookings/16" for 127.0.0.1 at 2018-02-26 16:56:56 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"13", "id"=>"16"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/13/bookings
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:56:56 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 13], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 86ms (Views: 76.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/13/bookings/new" for 127.0.0.1 at 2018-02-26 16:57:03 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"13"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (4.4ms)
+  Rendered bookings/_form.html.erb (11.1ms)
+  Rendered bookings/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 82ms (Views: 75.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/listings/13/bookings" for 127.0.0.1 at 2018-02-26 16:57:14 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-02-14", "end_date"=>"2018-02-22"}, "commit"=>"Reserve!", "listing_id"=>"13"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-14' >= start_date AND '2018-02-14' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-22' >= start_date AND '2018-02-22' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-02-14' <= start_date AND '2018-02-22' >= end_date)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 13], ["guest_id", 8], ["start_date", "2018-02-14"], ["end_date", "2018-02-22"], ["created_at", "2018-02-26 08:57:14.439556"], ["updated_at", "2018-02-26 08:57:14.439556"], ["total_price", 4000]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/13/bookings/17/new_payment
+Completed 302 Found in 24ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/listings/13/bookings/17/new_payment" for 127.0.0.1 at 2018-02-26 16:57:14 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 1371ms (Views: 76.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/listings/13/bookings/17/new_payment" for 127.0.0.1 at 2018-02-26 16:59:24 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 1206ms (Views: 95.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/listings/13/bookings/17/submit_payment" for 127.0.0.1 at 2018-02-26 16:59:41 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"d3c28f82-2a14-0b1c-6f80-bed22f845405"}, "listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = '17') ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/13/bookings/17
+Completed 302 Found in 1856ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/13/bookings/17" for 127.0.0.1 at 2018-02-26 16:59:43 +0800
+Processing by BookingsController#show as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 101ms (Views: 58.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/listings/13/bookings/17/new_payment" for 127.0.0.1 at 2018-02-26 17:00:15 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.7ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 1076ms (Views: 89.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/listings/13/bookings/17/submit_payment" for 127.0.0.1 at 2018-02-26 17:00:30 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"22b3cb10-423c-03e7-5b0c-01db59d5749e"}, "listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = '17') ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to 
+Completed 500 Internal Server Error in 2270ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `listing_booking_path_url' for #<BookingsController:0x00007fc7d0302f88>
+Did you mean?  listing_booking_path
+               listing_booking_url
+               listing_bookings_path
+               listing_bookings_url):
+  
+app/controllers/bookings_controller.rb:59:in `submit_payment'
+Started POST "/listings/13/bookings/17/submit_payment" for 127.0.0.1 at 2018-02-26 17:00:53 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"22b3cb10-423c-03e7-5b0c-01db59d5749e"}, "listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = '17') ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/13/bookings/17
+Completed 302 Found in 1274ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/listings/13/bookings/17" for 127.0.0.1 at 2018-02-26 17:00:54 +0800
+Processing by BookingsController#show as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 93ms (Views: 79.5ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/listings/13/bookings/17/submit_payment" for 127.0.0.1 at 2018-02-26 17:01:29 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"2c526781-f7d1-068a-7877-4e6d6987cb05"}, "listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = '17') ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/13/bookings/17/new_payment
+Completed 302 Found in 1966ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/listings/13/bookings/17/new_payment" for 127.0.0.1 at 2018-02-26 17:01:31 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.8ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 1085ms (Views: 94.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listings/13/bookings/17/new_payment" for 127.0.0.1 at 2018-02-26 17:03:44 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (2.6ms)
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 1285ms (Views: 79.3ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/listings/13/bookings/17/submit_payment" for 127.0.0.1 at 2018-02-26 17:03:59 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"4f449f17-ca0a-06df-7a04-e96c2acd7d39"}, "listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = '17') ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/13/bookings/17
+Completed 302 Found in 1676ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/listings/13/bookings/17" for 127.0.0.1 at 2018-02-26 17:04:01 +0800
+Processing by BookingsController#show as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 62ms (Views: 55.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listings/13/bookings/17" for 127.0.0.1 at 2018-02-26 17:04:24 +0800
+Processing by BookingsController#show as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 74ms (Views: 66.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/listings/13/bookings/17/submit_payment" for 127.0.0.1 at 2018-02-26 17:04:44 +0800
+Processing by BookingsController#submit_payment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "checkout_form"=>{"payment_method_nonce"=>"1958dd9d-e02e-07fa-561c-784d7969b82f"}, "listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND (id = '17') ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/13/bookings/17
+Completed 302 Found in 1994ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/listings/13/bookings/17" for 127.0.0.1 at 2018-02-26 17:04:46 +0800
+Processing by BookingsController#show as HTML
+  Parameters: {"listing_id"=>"13", "id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 74ms (Views: 66.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 17:05:44 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/current_user/bookings" for 127.0.0.1 at 2018-02-26 17:05:49 +0800
+Processing by BookingsController#user_bookings as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+  Rendering bookings/user_bookings.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1[0m  [["guest_id", 8]]
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/user_bookings.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 138ms (Views: 87.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 17:06:05 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "8ae3dd2ebf2391ca847570d9ff29c7e9f8099f60"], ["LIMIT", 1]]
+Completed 200 OK in 95ms (Views: 83.1ms | ActiveRecord: 2.5ms)
+
+
