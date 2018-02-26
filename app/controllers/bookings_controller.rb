@@ -37,6 +37,13 @@ class BookingsController < ApplicationController
      @booking = Booking.find(params[:id])
   end
 
+ def pay
+     @booking = Booking.find(params[:id])
+  end
+
+
+
+
   def destroy
     @booking = current_user.bookings.find(params[:id])
     if @booking.destroy

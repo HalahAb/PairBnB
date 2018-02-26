@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get "/users/current_user/bookings" => "bookings#user_bookings", as: "user_bookings"
   get "/users/:user_id/listings" => "listings#user_listings", as: "user_listings"
 
+  get "/listings/:listing_id/bookings/:id/submit_payment" => "bookings#pay", as: "submit_payment"
+
 
   # get "/welcome" => "welcome#index", as: "welcome"
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"

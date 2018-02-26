@@ -1,0 +1,53 @@
+<div class= "container">
+  <hr>
+ 
+  <div class ="row">
+
+    <div class ="col-4">
+    <h3> <strong> Submit Payment </strong> </h3>
+    </div>
+
+     <div class= "col ml-5">
+    <h3> <strong> Bookings Details</strong> </h3>
+    </div>
+
+  </div>
+  <hr>
+  <div class ="row">
+    <div class ="column">
+    </div>
+
+    <div class="column">
+    <%= render partial: 'payment_form' %>
+    </div>
+
+    <div class ="column">
+      <strong> Title: </strong><%= link_to @booking.listing.title, listing_booking_path(@booking.listing, @booking)%>
+
+      <p><small class="text-muted"><strong> Posted by </strong><%=@booking.listing.host.email%></small></p>
+
+      <p><strong> Description: </strong> <%=@booking.listing.description%><br/>
+      <strong> Price per day: </strong> &nbsp $<%=@booking.listing.price%><br/>
+      <strong> Total price: </strong> &nbsp $<%=@booking.total_price%><br/>
+      <strong> Booking dates:  </strong> [<%=@booking.start_date%>] to [<%=@booking.end_date%>] </p>
+      <br/>
+      <br/>
+
+
+      <small class="text-muted"><strong> created at </strong>Start Date:</strong> <%=@booking.start_date%> </small>
+      <br/>
+      <small class="text-muted"><strong> Updated at </strong><%=@booking.end_date%></small>
+
+      <br/>
+      <br/>
+
+
+      </div>
+
+
+
+  </div>
+</div>
+
+
+
