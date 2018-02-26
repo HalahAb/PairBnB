@@ -24,6 +24,7 @@ class BookingsController < ApplicationController
     @booking.listing_id = params[:listing_id]
     
     if @booking.save 
+      ReservationMailer.reservation_email(@booking.guest, @booking.host, @booking.id).deliver_now
       redirect_to '/listings/'+params[:listing_id]+'/bookings'+'/'+ @booking.id.to_s+'/new_payment'
     else
       @listing = Listing.find(params[:listing_id])
