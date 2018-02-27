@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'braintree/new'
 
+  #new users controller that permits name and image
+  resources :users, controller: :users, only: :create
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
   root "welcome#index"
