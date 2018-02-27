@@ -30656,3 +30656,1241 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 131ms (Views: 110.3ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-27 14:24:01 +0800
+  [1m[35m (27.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (197.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+Completed 200 OK in 3435ms (Views: 3365.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-27 14:24:08 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (40.6ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+Completed 200 OK in 141ms (Views: 107.5ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/listings/15" for 127.0.0.1 at 2018-02-27 14:24:11 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 109ms (Views: 71.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-27 14:24:13 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (5.8ms)
+  Rendered bookings/_form.html.erb (97.1ms)
+  Rendered bookings/new.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 240ms (Views: 188.0ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:24:30 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-17", "end_date"=>"2018-03-24"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' >= start_date AND '2018-03-17' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-24' >= start_date AND '2018-03-24' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' <= start_date AND '2018-03-24' >= end_date)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 15], ["guest_id", 8], ["start_date", "2018-03-17"], ["end_date", "2018-03-24"], ["created_at", "2018-02-27 06:24:30.243649"], ["updated_at", "2018-02-27 06:24:30.243649"], ["total_price", 3500]]
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "listings" ON "users"."id" = "listings"."host_id" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering reservation_mailer/reservation_email.html.erb within layouts/mailer
+  Rendered reservation_mailer/reservation_email.html.erb within layouts/mailer (1.6ms)
+ReservationMailer#reservation_email: processed outbound mail in 522.1ms
+Completed 500 Internal Server Error in 1572ms (ActiveRecord: 30.8ms)
+
+
+  
+NoMethodError (undefined method `deliver_later ' for #<ActionMailer::MessageDelivery:0x00007f8b39ed8f20>
+Did you mean?  deliver_later
+               deliver_later!):
+  
+app/controllers/bookings_controller.rb:27:in `create'
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:26:27 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-17", "end_date"=>"2018-03-24"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' >= start_date AND '2018-03-17' <= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-24' >= start_date AND '2018-03-24' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' <= start_date AND '2018-03-24' >= end_date)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (8.9ms)
+  Rendered bookings/_form.html.erb (40.7ms)
+  Rendered bookings/new.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 579ms (Views: 483.1ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:26:35 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-17", "end_date"=>"2018-03-24"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' >= start_date AND '2018-03-17' <= end_date)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-24' >= start_date AND '2018-03-24' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' <= start_date AND '2018-03-24' >= end_date)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (6.3ms)
+  Rendered bookings/_form.html.erb (13.5ms)
+  Rendered bookings/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 105ms (Views: 85.5ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:26:45 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-05-20", "end_date"=>"2018-05-27"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-20' >= start_date AND '2018-05-20' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-27' >= start_date AND '2018-05-27' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-20' <= start_date AND '2018-05-27' >= end_date)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 15], ["guest_id", 8], ["start_date", "2018-05-20"], ["end_date", "2018-05-27"], ["created_at", "2018-02-27 06:26:45.662751"], ["updated_at", "2018-02-27 06:26:45.662751"], ["total_price", 3500]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "listings" ON "users"."id" = "listings"."host_id" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: fc8c176a-225c-4072-8cda-9ef6b83959d6) to Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f8b3c182a08 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f8b3c181bf8 @uri=#<URI::GID gid://airbnb/User/9>>, 31
+Redirected to http://localhost:3000/listings/15/bookings/31/new_payment
+Completed 302 Found in 84ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/listings/15/bookings/31/new_payment" for 127.0.0.1 at 2018-02-27 14:26:45 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"15", "id"=>"31"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6] Performing ActionMailer::DeliveryJob (Job ID: fc8c176a-225c-4072-8cda-9ef6b83959d6) from Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f8673638868 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f867362fd08 @uri=#<URI::GID gid://airbnb/User/9>>, 31
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (22.2ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 2248ms (Views: 119.1ms | ActiveRecord: 1.7ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6]   Rendering reservation_mailer/reservation_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6]   Rendered reservation_mailer/reservation_email.html.erb within layouts/mailer (10.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6] ReservationMailer#reservation_email: processed outbound mail in 409.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6] Sent mail to halah.abuateeq@gmail.com (154.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6] Date: Tue, 27 Feb 2018 14:26:49 +0800
+From: halah.dev@gmail.com
+To: halah.abuateeq@gmail.com
+Message-ID: <5a94fa293530c_931d3fc33c041a98391a@Ahmeds-MacBook-Pro-3.local.mail>
+Subject: Your booking was sucessful!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Congratulations! You have received a booking from </h1>
+    <p>
+      You can see details of your new reservation here: http://localhost:3000/sign_in
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [fc8c176a-225c-4072-8cda-9ef6b83959d6] Performed ActionMailer::DeliveryJob (Job ID: fc8c176a-225c-4072-8cda-9ef6b83959d6) from Sidekiq(mailers) in 1658.55ms
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:40:41 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 255ms (Views: 205.9ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/listings/15/bookings/26" for 127.0.0.1 at 2018-02-27 14:40:47 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"26"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 26]]
+  [1m[35m (47.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 60ms (ActiveRecord: 51.0ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:40:47 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 82ms (Views: 70.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:40:50 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 70ms (Views: 61.2ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/listings/15/bookings/27" for 127.0.0.1 at 2018-02-27 14:40:52 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"27"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 27], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:40:52 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 99ms (Views: 89.8ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/listings/15/bookings/28" for 127.0.0.1 at 2018-02-27 14:40:55 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"28"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 12ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:40:55 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 91ms (Views: 81.5ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/listings/15/bookings/30" for 127.0.0.1 at 2018-02-27 14:40:58 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"30"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 12ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:40:58 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 94ms (Views: 83.5ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/listings/15/bookings/29" for 127.0.0.1 at 2018-02-27 14:41:01 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"29"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 29], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:41:01 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1[0m  [["listing_id", 15]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 80ms (Views: 70.8ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/listings/15/bookings/31" for 127.0.0.1 at 2018-02-27 14:41:04 +0800
+Processing by BookingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "listing_id"=>"15", "id"=>"31"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 AND "bookings"."id" = $2 LIMIT $3[0m  [["guest_id", 8], ["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings/15/bookings
+Completed 302 Found in 11ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:41:04 +0800
+Processing by BookingsController#index as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."listing_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["listing_id", 15], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 76ms (Views: 67.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-27 14:41:07 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 74.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-27 14:41:08 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 89.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings/15" for 127.0.0.1 at 2018-02-27 14:41:11 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 106ms (Views: 65.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-27 14:41:15 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (4.6ms)
+  Rendered bookings/_form.html.erb (11.4ms)
+  Rendered bookings/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 126ms (Views: 81.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:41:23 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-03-09", "end_date"=>"2018-03-17"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-09' >= start_date AND '2018-03-09' <= end_date)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-17' >= start_date AND '2018-03-17' <= end_date)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-03-09' <= start_date AND '2018-03-17' >= end_date)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 15], ["guest_id", 8], ["start_date", "2018-03-09"], ["end_date", "2018-03-17"], ["created_at", "2018-02-27 06:41:23.062001"], ["updated_at", "2018-02-27 06:41:23.062001"], ["total_price", 4000]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "listings" ON "users"."id" = "listings"."host_id" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 6310f36b-3bce-4e5b-a762-bf8d364a239c) to Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f8b39da2e58 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f8b39da1878 @uri=#<URI::GID gid://airbnb/User/9>>, 32
+Redirected to http://localhost:3000/listings/15/bookings/32/new_payment
+Completed 302 Found in 25ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/listings/15/bookings/32/new_payment" for 127.0.0.1 at 2018-02-27 14:41:23 +0800
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"15", "id"=>"32"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c] Performing ActionMailer::DeliveryJob (Job ID: 6310f36b-3bce-4e5b-a762-bf8d364a239c) from Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f86747b7eb8 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f86747b5aa0 @uri=#<URI::GID gid://airbnb/User/9>>, 32
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c]   Rendering reservation_mailer/reservation_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c]   Rendered reservation_mailer/reservation_email.html.erb within layouts/mailer (1.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c] ReservationMailer#reservation_email: processed outbound mail in 92.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c] Sent mail to halah.abuateeq@gmail.com (26.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c] Date: Tue, 27 Feb 2018 14:41:23 +0800
+From: halah.dev@gmail.com
+To: halah.abuateeq@gmail.com
+Message-ID: <5a94fd933f1d9_931d3fc33c0445cc40d2@Ahmeds-MacBook-Pro-3.local.mail>
+Subject: Your booking was sucessful!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Congratulations! You have received a booking from </h1>
+    <p>
+      You can see details of your new reservation here: http://localhost:3000/sign_in
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [6310f36b-3bce-4e5b-a762-bf8d364a239c] Performed ActionMailer::DeliveryJob (Job ID: 6310f36b-3bce-4e5b-a762-bf8d364a239c) from Sidekiq(mailers) in 122.29ms
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (1.9ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 1504ms (Views: 86.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-27 14:54:32 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (5.3ms)
+  Rendered bookings/_form.html.erb (35.1ms)
+  Rendered bookings/new.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 658ms (Views: 607.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-27 14:54:34 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (4.9ms)
+  Rendered bookings/_form.html.erb (10.6ms)
+  Rendered bookings/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-27 14:54:36 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (5.3ms)
+  Rendered bookings/_form.html.erb (12.5ms)
+  Rendered bookings/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 82ms (Views: 76.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 14:54:46 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-04-27", "end_date"=>"2018-06-16"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-04-27' >= start_date AND '2018-04-27' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-06-16' >= start_date AND '2018-06-16' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-04-27' <= start_date AND '2018-06-16' >= end_date)[0m
+  [1m[35mSQL (18.3ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 15], ["guest_id", 8], ["start_date", "2018-04-27"], ["end_date", "2018-06-16"], ["created_at", "2018-02-27 06:54:46.466242"], ["updated_at", "2018-02-27 06:54:46.466242"], ["total_price", 25000]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "listings" ON "users"."id" = "listings"."host_id" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 8e55176f-90a8-4ba0-9c76-4b88d2ff1593) to Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f8b39a30770 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f8b39a18418 @uri=#<URI::GID gid://airbnb/User/9>>, 33
+Redirected to http://localhost:3000/listings/15/bookings/33/new_payment
+Completed 302 Found in 44ms (ActiveRecord: 23.1ms)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/listings/15/bookings/33/new_payment" for 127.0.0.1 at 2018-02-27 14:54:46 +0800
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"15", "id"=>"33"}
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593] Performing ActionMailer::DeliveryJob (Job ID: 8e55176f-90a8-4ba0-9c76-4b88d2ff1593) from Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f86773f3310 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f86773f2898 @uri=#<URI::GID gid://airbnb/User/9>>, 33
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593]   Rendering reservation_mailer/reservation_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593]   Rendered reservation_mailer/reservation_email.html.erb within layouts/mailer (0.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593] ReservationMailer#reservation_email: processed outbound mail in 66.0ms
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593] Sent mail to halah.abuateeq@gmail.com (65.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593] Date: Tue, 27 Feb 2018 14:54:46 +0800
+From: halah.dev@gmail.com
+To: halah.abuateeq@gmail.com
+Message-ID: <5a9500b68cf66_931d3fc33c044d8841c6@Ahmeds-MacBook-Pro-3.local.mail>
+Subject: Your booking was sucessful!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Congratulations, ! Your booking at Pairbnb was successful!</h1>
+    <p>
+      You can see details of your new reservation here: http://localhost:3000/sign_in
+    </p>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Transactional Email</title>
+    <style>
+    /* -------------------------------------
+        INLINED WITH htmlemail.io/inline
+    ------------------------------------- */
+    /* -------------------------------------
+        RESPONSIVE AND MOBILE FRIENDLY STYLES
+    ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+      table[class=body] p,
+            table[class=body] ul,
+            table[class=body] ol,
+            table[class=body] td,
+            table[class=body] span,
+            table[class=body] a {
+        font-size: 16px !important;
+      }
+      table[class=body] .wrapper,
+            table[class=body] .article {
+        padding: 10px !important;
+      }
+      table[class=body] .content {
+        padding: 0 !important;
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+      table[class=body] .btn table {
+        width: 100% !important;
+      }
+      table[class=body] .btn a {
+        width: 100% !important;
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+    /* -------------------------------------
+        PRESERVE THESE STYLES IN THE HEAD
+    ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+        line-height: 100%;
+      }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+    </style>
+  </head>
+  <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
+      <tr>
+        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
+        <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;">
+          <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
+            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;">
+                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there,</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
+                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
+                          <tbody>
+                            <tr>
+                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="http://htmlemail.io" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Call To Action</a> </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Good luck! Hope it works.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+            </table>
+
+            <!-- START FOOTER -->
+            <div class="footer" style="clear: both; Margin-top: 10px; text-align: center; width: 100%;">
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                <tr>
+                  <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
+                    <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
+                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
+                    Powered by <a href="http://htmlemail.io" style="color: #999999; font-size: 12px; text-align: center; text-decoration: none;">HTMLemail</a>.
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+
+          <!-- END CENTERED WHITE CONTAINER -->
+          </div>
+        </td>
+        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [8e55176f-90a8-4ba0-9c76-4b88d2ff1593] Performed ActionMailer::DeliveryJob (Job ID: 8e55176f-90a8-4ba0-9c76-4b88d2ff1593) from Sidekiq(mailers) in 132.68ms
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (9.0ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 1448ms (Views: 113.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/current_user/bookings" for 127.0.0.1 at 2018-02-27 15:01:58 +0800
+Processing by BookingsController#user_bookings as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  Rendering bookings/user_bookings.html.erb within layouts/application
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1 ORDER BY "bookings"."id" ASC LIMIT $2[0m  [["guest_id", 8], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."guest_id" = $1[0m  [["guest_id", 8]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/user_bookings.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 600ms (Views: 551.3ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2018-02-27 15:02:10 +0800
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "45463a24a2aed74b48ffa0642d0db30829284ad7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["updated_at", "2018-02-27 07:02:10.971447"], ["id", 8]]
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 49ms (ActiveRecord: 41.9ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-27 15:02:11 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.5ms)
+  Rendered sessions/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 110ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2018-02-27 15:02:15 +0800
+Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-27 15:02:15 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.1ms)
+  Rendered sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 67ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/current_user/bookings" for 127.0.0.1 at 2018-02-27 15:02:18 +0800
+Processing by BookingsController#user_bookings as HTML
+Redirected to http://localhost:3000/sign_in
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-02-27 15:02:18 +0800
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 59ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-27 15:02:23 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-27 15:02:23 +0800
+Started GET "/auth/facebook/callback?code=AQDbMD_IEp41_66A8YVE293YP99RFsTqrLR2psM2ieJng5OdOGHDxmq400F2awb6xXZfbux4XgWGL59ff67N9Ln6tYCIHmWM0pU8RQ5MnmPQzXbqFCgQAqu2dye3WihrVWuDtYQOKCoz9catsIA9Pk7f3wdGUIvE4qiaHEneHFu24WdSU_CnTDOG8N7lJiXiz5MInQHD93uq0lsmvIvGl1_tNn-9hxKosKYf0Uw9hFIST8GhbL3qxnWlgcA3M8oc4uqhkRIwqJ-q6H3ejzYUc1jfSK-sYyHIGSlLgA0MzMrRrax6Os3Ne3BhFyZYI3P3yOB1ygAzJfoeGnogAu4wsb20&state=edb9b6201b1e2504eb70fe1acf48f90de5b302ce224e8f79" for 127.0.0.1 at 2018-02-27 15:02:24 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQDbMD_IEp41_66A8YVE293YP99RFsTqrLR2psM2ieJng5OdOGHDxmq400F2awb6xXZfbux4XgWGL59ff67N9Ln6tYCIHmWM0pU8RQ5MnmPQzXbqFCgQAqu2dye3WihrVWuDtYQOKCoz9catsIA9Pk7f3wdGUIvE4qiaHEneHFu24WdSU_CnTDOG8N7lJiXiz5MInQHD93uq0lsmvIvGl1_tNn-9hxKosKYf0Uw9hFIST8GhbL3qxnWlgcA3M8oc4uqhkRIwqJ-q6H3ejzYUc1jfSK-sYyHIGSlLgA0MzMrRrax6Os3Ne3BhFyZYI3P3yOB1ygAzJfoeGnogAu4wsb20", "state"=>"edb9b6201b1e2504eb70fe1acf48f90de5b302ce224e8f79", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (1.0ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBAA3NaZCjZB5esDvyzrB1EeTbz4A3jFuZBKpF6bMKNC9OXuGPjP65q7N9rskK01tZBzUqMkr5nZBgZBmPfsiwzq46WyEeeI9ElpZAxCBUZAVI0ChDQkZANNrZBcxKqjOtPP1A1PMhToIWMZAHes4EUquQDPJspnrKLrF6HzqxvadR6yb"], ["updated_at", "2018-02-27 07:02:25.328982"], ["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-27 15:02:25 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 58.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-27 15:04:14 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-02-27 15:04:14 +0800
+Started GET "/auth/facebook/callback?code=AQCSqexc1yIwSUmPoI1P4y7XjKP2BjdPQF7qtKsWtPFg0DNn6mQJtYhNTQuJs6aeQacbiZcFuIcRJGHD0WFxboJwDnIbgTQ5xOKXY1o0_dO1D7nzd9IDFohNK_uXa618GO5kxbB4Gp07VWzdaPhiNuyE2rLQpsRELEHcuO8iKtr7jzp99SqwgBc0Wex9rwis3Rck1xUd10VdFEQ9HjGngTEVB8SYSuRgMV8ei5k0iVDnhp86ynCKVYljCLWdtz3edSqfxdQqAp07roJbSwCARQHp7xc-iDJeY3olTJ7j5ENPhZBqLJWKsujfddnDptoY7aviZHrk4A1Qi5ErhZJQHf_c&state=cc4638fdd0218457f341a5c463caae01e36880f13401f779" for 127.0.0.1 at 2018-02-27 15:04:14 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQCSqexc1yIwSUmPoI1P4y7XjKP2BjdPQF7qtKsWtPFg0DNn6mQJtYhNTQuJs6aeQacbiZcFuIcRJGHD0WFxboJwDnIbgTQ5xOKXY1o0_dO1D7nzd9IDFohNK_uXa618GO5kxbB4Gp07VWzdaPhiNuyE2rLQpsRELEHcuO8iKtr7jzp99SqwgBc0Wex9rwis3Rck1xUd10VdFEQ9HjGngTEVB8SYSuRgMV8ei5k0iVDnhp86ynCKVYljCLWdtz3edSqfxdQqAp07roJbSwCARQHp7xc-iDJeY3olTJ7j5ENPhZBqLJWKsujfddnDptoY7aviZHrk4A1Qi5ErhZJQHf_c", "state"=>"cc4638fdd0218457f341a5c463caae01e36880f13401f779", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.5ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "103365700490104"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAARfU6d8mhIBADBYq8wG2Gb3E05aZCNNPJ1EcP1i0AckDhq5sNeQ06sPSo8ELxijIEM3xaCk3rpo3cH0ofjOPk3TqPTsKU1jabSiw7PmObxcLg9uje1sQXaFjWxaFEACvmgARBUj8R85xZB3eTU5K7MSgXbrvKjSZBFZCOwD5mP12a6QNWZCW"], ["updated_at", "2018-02-27 07:04:15.535433"], ["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-27 15:04:15 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+Completed 200 OK in 309ms (Views: 253.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-02-27 15:04:17 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (34.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 104.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/listings/15" for 127.0.0.1 at 2018-02-27 15:04:19 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 123ms (Views: 82.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/15/bookings/new" for 127.0.0.1 at 2018-02-27 15:04:21 +0800
+Processing by BookingsController#new as HTML
+  Parameters: {"listing_id"=>"15"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (5.2ms)
+  Rendered bookings/_form.html.erb (12.5ms)
+  Rendered bookings/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 115ms (Views: 99.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 15:04:45 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-05-30", "end_date"=>"2018-06-02"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-30' >= start_date AND '2018-05-30' <= end_date)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-06-02' >= start_date AND '2018-06-02' <= end_date)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-30' <= start_date AND '2018-06-02' >= end_date)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (6.4ms)
+  Rendered bookings/_form.html.erb (13.6ms)
+  Rendered bookings/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 104ms (Views: 84.4ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 15:04:52 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-05-30", "end_date"=>"2018-07-06"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-30' >= start_date AND '2018-05-30' <= end_date)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-07-06' >= start_date AND '2018-07-06' <= end_date)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-05-30' <= start_date AND '2018-07-06' >= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (8.1ms)
+  Rendered bookings/_form.html.erb (15.2ms)
+  Rendered bookings/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 112ms (Views: 81.1ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 15:05:02 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-06-01", "end_date"=>"2018-07-06"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-06-01' >= start_date AND '2018-06-01' <= end_date)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-07-06' >= start_date AND '2018-07-06' <= end_date)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-06-01' <= start_date AND '2018-07-06' >= end_date)[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering bookings/new.html.erb within layouts/application
+  Rendering listings/show.html.erb
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered listings/show.html.erb (7.8ms)
+  Rendered bookings/_form.html.erb (14.6ms)
+  Rendered bookings/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 103ms (Views: 83.4ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/listings/15/bookings" for 127.0.0.1 at 2018-02-27 15:05:10 +0800
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2018-07-01", "end_date"=>"2018-07-06"}, "commit"=>"Reserve!", "listing_id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-07-01' >= start_date AND '2018-07-01' <= end_date)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-07-06' >= start_date AND '2018-07-06' <= end_date)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings" WHERE ('2018-07-01' <= start_date AND '2018-07-06' >= end_date)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "bookings" ("listing_id", "guest_id", "start_date", "end_date", "created_at", "updated_at", "total_price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["listing_id", 15], ["guest_id", 8], ["start_date", "2018-07-01"], ["end_date", "2018-07-06"], ["created_at", "2018-02-27 07:05:10.721314"], ["updated_at", "2018-02-27 07:05:10.721314"], ["total_price", 2500]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "listings" ON "users"."id" = "listings"."host_id" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 74df8d51-408e-494c-9d27-54943979438c) to Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f8b3c189650 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f8b3c188c50 @uri=#<URI::GID gid://airbnb/User/9>>, 34
+Redirected to http://localhost:3000/listings/15/bookings/34/new_payment
+Completed 302 Found in 24ms (ActiveRecord: 5.5ms)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/listings/15/bookings/34/new_payment" for 127.0.0.1 at 2018-02-27 15:05:10 +0800
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Processing by BookingsController#pay as HTML
+  Parameters: {"listing_id"=>"15", "id"=>"34"}
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c] Performing ActionMailer::DeliveryJob (Job ID: 74df8d51-408e-494c-9d27-54943979438c) from Sidekiq(mailers) with arguments: "ReservationMailer", "reservation_email", "deliver_now", #<GlobalID:0x00007f867823bb98 @uri=#<URI::GID gid://airbnb/User/8>>, #<GlobalID:0x00007f867823b378 @uri=#<URI::GID gid://airbnb/User/9>>, 34
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "880dc949b5d1e000c1ea6048d725b8b6f757530f"], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c]   Rendering reservation_mailer/reservation_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c]   Rendered reservation_mailer/reservation_email.html.erb within layouts/mailer (0.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c] ReservationMailer#reservation_email: processed outbound mail in 68.5ms
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c] Sent mail to halah.abuateeq@gmail.com (79.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c] Date: Tue, 27 Feb 2018 15:05:10 +0800
+From: halah.dev@gmail.com
+To: halah.abuateeq@gmail.com
+Message-ID: <5a950326c5ed5_931d3fc33c044860423b@Ahmeds-MacBook-Pro-3.local.mail>
+Subject: Your booking was sucessful!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Congratulations, ! Your booking at Pairbnb was successful!</h1>
+    <p>
+      You can see details of your new reservation here: http://localhost:3000/sign_in
+    </p>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Transactional Email</title>
+    <style>
+    /* -------------------------------------
+        INLINED WITH htmlemail.io/inline
+    ------------------------------------- */
+    /* -------------------------------------
+        RESPONSIVE AND MOBILE FRIENDLY STYLES
+    ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+      table[class=body] p,
+            table[class=body] ul,
+            table[class=body] ol,
+            table[class=body] td,
+            table[class=body] span,
+            table[class=body] a {
+        font-size: 16px !important;
+      }
+      table[class=body] .wrapper,
+            table[class=body] .article {
+        padding: 10px !important;
+      }
+      table[class=body] .content {
+        padding: 0 !important;
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+      table[class=body] .btn table {
+        width: 100% !important;
+      }
+      table[class=body] .btn a {
+        width: 100% !important;
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+    /* -------------------------------------
+        PRESERVE THESE STYLES IN THE HEAD
+    ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+        line-height: 100%;
+      }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+    </style>
+  </head>
+  <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
+      <tr>
+        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
+        <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;">
+          <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
+            <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;">
+                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Congratulations, </p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your Reservation with Pairbnb was successful!</p>
+                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
+                          <tbody>
+                            <tr>
+                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="http://localhost:3000/sign_in" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;"> Sign in to view your reservations</a> </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">We hope you enjoy your stay with us.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+            </table>
+
+            <!-- START FOOTER -->
+            <div class="footer" style="clear: both; Margin-top: 10px; text-align: center; width: 100%;">
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                <tr>
+                  <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
+                    <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">Pairbnb</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
+                    Powered by Pairbnb.com
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+
+          <!-- END CENTERED WHITE CONTAINER -->
+          </div>
+        </td>
+        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [74df8d51-408e-494c-9d27-54943979438c] Performed ActionMailer::DeliveryJob (Job ID: 74df8d51-408e-494c-9d27-54943979438c) from Sidekiq(mailers) in 149.24ms
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering bookings/pay.html.erb within layouts/application
+  Rendered bookings/_payment_form.html.erb (3.6ms)
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered bookings/pay.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 1463ms (Views: 81.1ms | ActiveRecord: 1.9ms)
+
+
