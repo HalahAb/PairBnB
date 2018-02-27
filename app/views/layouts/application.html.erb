@@ -72,7 +72,7 @@
             </li>
             <!--profile image -->
             <li class ="ml-2">
-              <%= image_tag current_user.image_url, class: "rounded-circle",size: "65"%>
+              <%= image_tag current_user.image_url.to_s, class: "rounded-circle",size: "65"%>
             </li>
 
           </li>
@@ -241,8 +241,8 @@
 <!-- end nav bar -->
 
 
-
-
+<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+ -->
 <!-- 
     <div id="header">
       <%= link_to "Sign in with Facebook", "/auth/facebook" %>
