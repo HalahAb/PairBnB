@@ -47,35 +47,42 @@
       <ul class="navbar-nav ml-5">
 
         <% if signed_in? -%>
-        <li class="nav-item active text-muted" style= "font-size: 11px;">
-          logged in as: 
-          <br/>
-          <%= current_user.email %>
-        </li>
-        <li class="nav-item active">
-        <!-- insert drop down here --> 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Manage your account
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/users/current_user/bookings">View all your bookings </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/users/current_user/listings"> View your listings</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/listings/new">Become a host - Create New listing!</a>
-          </div>
-        </li>
-        <!-- end drop down -->
-          <%= link_to t(".sign_out"), sign_out_path, method: :delete, class:"nav-link" %>
-        </li>
-        <% else -%>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignIn">Sign in <span class="sr-only">(current)</span></a>
+          <li class="nav-item active text-muted mt-2" style= "font-size: 11px;">
+            logged in as: 
+            <br/>
+            <%= current_user.email %>
           </li>
           <li class="nav-item active">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignUp">Sign up <span class="sr-only">(current)</span></a>
-        </li>
+            <!-- insert drop down here --> 
+            <li class="nav-item dropdown mt-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Manage your account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/users/current_user/bookings">View all your bookings </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/users/current_user/listings"> View your listings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/listings/new">Become a host - Create New listing!</a>
+              </div>
+            </li>
+            <!-- end drop down -->
+            <li class ="mt-2">
+              <%= link_to t(".sign_out"), sign_out_path, method: :delete, class:"nav-link" %>
+            </li>
+            <!--profile image -->
+            <li class ="ml-2">
+              <%= image_tag current_user.image_url.to_s, class: "rounded-circle",size: "65"%>
+            </li>
+
+          </li>
+          <% else -%>
+            <li class="nav-item active">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignIn">Sign in <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#myModalSignUp">Sign up <span class="sr-only">(current)</span></a>
+          </li>
         <% end -%>
 
 
@@ -234,8 +241,8 @@
 <!-- end nav bar -->
 
 
-
-
+<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+ -->
 <!-- 
     <div id="header">
       <%= link_to "Sign in with Facebook", "/auth/facebook" %>
