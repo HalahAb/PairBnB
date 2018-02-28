@@ -6,8 +6,6 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-  #configure active job to use sidekiq
-  config.active_job.queue_adapter = :sidekiq
 
 module Airbnb
   class Application < Rails::Application
