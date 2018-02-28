@@ -53,6 +53,7 @@ class ListingsController < ApplicationController
   # show a listing by id
   def show
     @listing = Listing.find(params[:id])
+    @amenities = @listing.bitfield_values(:amenities).select{|key,value| value == true }
   end
 
   
@@ -60,7 +61,18 @@ class ListingsController < ApplicationController
 
   def listing_params
     # {"first_name"=>"asdf", "last_name"=>"asdf"}
-    params.require(:listing).permit(:title, :description,:price,:location, {listing_images: []})
+    params.require(:listing).permit(:title, :description,:price,:location, {listing_images: []},:parking, 
+    :wifi, 
+    :disabled_access, 
+    :smoking, 
+    :kitchen, 
+    :pool, 
+    :garden, 
+    :private_room, 
+    :airconditioning, 
+    :event_hosting, 
+    :gym, 
+    :elevator)
   end
 
 
