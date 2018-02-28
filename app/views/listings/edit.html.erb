@@ -1,17 +1,6 @@
-
-<div class ="container">
-  <br/>
+<div class ="container mt-5 mb-3">
     <h1>Update Listing</h1>
-
-  <div class="column">
-    <%= form_for( @listing, :html => {:class => "form-control"} )do |form| %>
-        <%= form.label :title, style: 'margin: 1%' %>
-        <%= form.text_field :title , class: 'form-control' %>
-        <%= form.label :description, style: 'margin: 1%'  %>
-        <%= form.text_area :description, class: 'form-control', size: '50x10'%>
-        <%= form.submit"Update", class: "btn btn-primary mt-5" %>
-    <% end %>
-  </div>
-
-
 </div>
+  <%= render partial: 'form' %>
+
+
