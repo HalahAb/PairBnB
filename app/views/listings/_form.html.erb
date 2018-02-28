@@ -1,5 +1,5 @@
 
-<div class ="container">
+<div class ="container mb-5">
   <br/>
     <h1>New Listing</h1>
 
@@ -16,7 +16,14 @@
 
         <%= form.label :description, style: 'margin: 1%'  %>
         <%= form.text_area :description, class: 'form-control', size: '50x10'%>
-        <%= form.submit"Create a listing", class: "btn btn-primary mt-5" %>
+        <div class ="row " >
+          <div class ="col-5 mt-5 ml-4" >
+            <%= form.file_field :listing_images, multiple: true %>
+          </div>
+          <div class ="column" >
+            <%= form.submit"Create a listing", class: "btn btn-primary mt-5" %>
+          </div>
+        </div>
     <% end %>
   </div>
 

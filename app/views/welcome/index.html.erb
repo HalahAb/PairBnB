@@ -10,6 +10,9 @@
       <div class="card">
 
         <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <%if listing.listing_images !=[]%>
+        <%= image_tag listing.listing_images[0].url, class:"img-thumbnail mb-3" %>
+        <%end%>
         
         <div class="card-body" style = " padding: 15%">
 
