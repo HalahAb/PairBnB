@@ -1,4 +1,4 @@
-require 'carrierwave'
+require 'carrierwave/storage/fog'
 require 'fog/aws'
 
 CarrierWave.configure do |config|
