@@ -42191,3 +42191,366 @@ Processing by ListingsController#index as HTML
 Completed 200 OK in 138ms (Views: 107.0ms | ActiveRecord: 26.1ms)
 
 
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:49:18 +0800
+  [1m[35m (35.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/listing_images_uploader.rb:8:in `<class:ListingImagesUploader>'
+app/uploaders/listing_images_uploader.rb:1:in `<top (required)>'
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:50:00 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/listing_images_uploader.rb:10:in `<class:ListingImagesUploader>'
+app/uploaders/listing_images_uploader.rb:3:in `<top (required)>'
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:50:01 +0800
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/listing_images_uploader.rb:10:in `<class:ListingImagesUploader>'
+app/uploaders/listing_images_uploader.rb:3:in `<top (required)>'
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:50:02 +0800
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 715ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:50:02 +0800
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/listing_images_uploader.rb:10:in `<class:ListingImagesUploader>'
+app/uploaders/listing_images_uploader.rb:3:in `<top (required)>'
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 771ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/listing_images_uploader.rb:10:in `<class:ListingImagesUploader>'
+app/uploaders/listing_images_uploader.rb:3:in `<top (required)>'
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:51:14 +0800
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 4.0ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fba17388b18>):
+  
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:51:32 +0800
+Processing by ListingsController#index as HTML
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:51:43 +0800
+Completed 500 Internal Server Error in 765ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fba1a923c00>):
+  
+app/models/listing.rb:6:in `<class:Listing>'
+app/models/listing.rb:3:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fba1aa20360>):
+  
+app/models/listing.rb:6:in `<class:Listing>'
+app/models/listing.rb:3:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:52:01 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:52:02 +0800
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fc6fac03898>):
+  
+app/models/listing.rb:6:in `<class:Listing>'
+app/models/listing.rb:3:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 956ms (ActiveRecord: 13.0ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fc6feaac6a8>):
+  
+app/models/listing.rb:6:in `<class:Listing>'
+app/models/listing.rb:3:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:53:14 +0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 31.1ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fa218080d60>):
+  
+app/models/listing.rb:6:in `<class:Listing>'
+app/models/listing.rb:3:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:53:17 +0800
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 14.5ms)
+
+
+  
+NoMethodError (undefined method `mount_uploaders' for #<Class:0x00007fa2180b2090>):
+  
+app/models/listing.rb:6:in `<class:Listing>'
+app/models/listing.rb:3:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:54:03 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/listing_images_uploader.rb:8:in `<class:ListingImagesUploader>'
+app/uploaders/listing_images_uploader.rb:1:in `<top (required)>'
+app/models/listing.rb:4:in `<class:Listing>'
+app/models/listing.rb:1:in `<top (required)>'
+app/controllers/listings_controller.rb:11:in `index'
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:54:29 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (2.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (2442.2ms)
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+Completed 200 OK in 9428ms (Views: 8641.2ms | ActiveRecord: 329.8ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:55:50 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:55:51 +0800
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (4.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (163.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (101.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (97.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (509.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+Completed 200 OK in 1582ms (Views: 1298.9ms | ActiveRecord: 251.9ms)
+
+
+Completed 200 OK in 1529ms (Views: 1470.6ms | ActiveRecord: 53.0ms)
+
+
+Started GET "/uploads/listing/listing_images/32/56587_11491_001.jpg" for 127.0.0.1 at 2018-03-01 22:55:52 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/listing/listing_images/32/56587_11491_001.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/listings/10" for 127.0.0.1 at 2018-03-01 22:55:55 +0800
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 111ms (Views: 83.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-01 22:55:59 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 4]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 78.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2018-03-01 22:56:02 +0800
+Processing by ListingsController#new as HTML
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (51.7ms)
+  Rendered listings/new.html.erb within layouts/application (65.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+Completed 200 OK in 180ms (Views: 130.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/listings" for 127.0.0.1 at 2018-03-01 22:56:27 +0800
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "listing"=>{"title"=>"Hi there", "price"=>"99.99", "location"=>"Kuala Lumpur", "description"=>"", "parking"=>"0", "disabled_access"=>"0", "elevator"=>"0", "smoking"=>"0", "wifi"=>"0", "private_room"=>"1", "kitchen"=>"1", "air_conditioning"=>"0", "event_hosting"=>"0", "gym"=>"0", "pool"=>"0", "garden"=>"0", "listing_images"=>[#<ActionDispatch::Http::UploadedFile:0x00007fde776d21f0 @tempfile=#<Tempfile:/var/folders/9w/hw9t7db95z91_sjbxmh6rqnw0000gp/T/RackMultipart20180301-51311-mbvhbv.jpg>, @original_filename="56587_11491_001.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"listing[listing_images][]\"; filename=\"56587_11491_001.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create a listing"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+Unpermitted parameter: :air_conditioning
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("host_id", "title", "description", "location", "created_at", "updated_at", "price", "listing_images", "amenities") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 11], ["title", "Hi there"], ["description", ""], ["location", "Kuala Lumpur"], ["created_at", "2018-03-01 14:56:28.103090"], ["updated_at", "2018-03-01 14:56:28.103090"], ["price", 99], ["listing_images", "[\"56587_11491_001.jpg\"]"], ["amenities", 144]]
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 136ms (ActiveRecord: 43.6ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2018-03-01 22:56:28 +0800
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered listings/index.html.erb within layouts/application (27.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "0dd0fb1145fc3be4fdf32f485b9a6dc5095756d4"], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 93.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/uploads/listing/listing_images/32/56587_11491_001.jpg" for 127.0.0.1 at 2018-03-01 22:56:28 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/listing/listing_images/32/56587_11491_001.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

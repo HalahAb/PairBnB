@@ -252,7 +252,7 @@ DEPENDENCIES
   braintree
   byebug
   capybara (~> 2.13)
-  carrierwave (~> 1.0)
+  carrierwave (~> 1.2.1)
   clearance
   coffee-rails (~> 4.2)
   figaro
