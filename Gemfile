@@ -35,6 +35,7 @@ gem 'braintree'
 gem 'sidekiq'
 gem 'bitfields'
 gem 'flatpickr'
+gem 'fog'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

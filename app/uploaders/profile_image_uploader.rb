@@ -13,6 +13,22 @@ class ProfileImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  # app/uploaders/my_uploader.rb
+  process :convert => 'png'
+  def filename
+      super.chomp(File.extname(super)) + '.png' if original_filename
+  end
+
+  # app/uploaders/my_uploader.rb
+  version :avatar, if: :create_avatar? do
+      process :resize_to_limit => [200, 200]
+  end
+
+  def create_avatar?(img = nil)
+      # conditions, return true / false
+      # e.g. model.should_create_avatar?
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
