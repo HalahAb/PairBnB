@@ -11,11 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require font-awesome
+ *= require flatpickr
  *= require_tree .
  *= require_self
-
  */
-
+ 
 
  #search_nav {
   width: 40vw;

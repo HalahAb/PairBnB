@@ -1,4 +1,4 @@
-<div class= "container mb-5">
+<div class= "container mb-0">
   <hr>
 
   <h3> <strong> Title:</strong> <%=@listing.title%></h3>
@@ -58,9 +58,13 @@
       <hr>
        <strong> Amenities: </strong>
       <hr>
-          <%@amenities.each do |key, value|%>
-            <strong>  ✓  <%= key.to_s.humanize  %> </strong> <br/>
 
+          <% if @amenities.present? %>
+            <%@amenities.each do |key, value|%>
+             <strong>  ✓  <%= key.to_s.humanize  %> </strong><br/>
+            <%end%>
+          <%else%>
+          <p> No amenities listed. </p>
           <%end%>
 </div>
  
@@ -73,8 +77,8 @@
 
     <br/>
     <br/>
-    <div class ="row">
-      &nbsp &nbsp 
+    <div class ="row ml-1">
+
 
       
       <% if @listing.host == current_user %>

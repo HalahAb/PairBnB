@@ -16,15 +16,15 @@
   <br/>
   <br/>
   <div class ="container">
-  <div class="row">
-    <div class ="col-{breakpoint}-auto mr-4">
-    <strong>Start Date:</strong> <%=@booking.start_date%>
-    </div>
-    <div class ="col-{breakpoint}-auto ">
-    <strong>End Date:</strong> <%=@booking.end_date%> 
+    <div class="row">
+      <div class ="col-{breakpoint}-auto mr-4">
+      <strong>Start Date:</strong> <%=@booking.start_date%>
+      </div>
+      <div class ="col-{breakpoint}-auto ">
+      <strong>End Date:</strong> <%=@booking.end_date%> 
+      </div>
     </div>
   </div>
-</div>
 <br/>
 
   <%= button_to 'Destroy', listing_booking_path(@booking.listing, @booking), :class=>"btn btn-danger",

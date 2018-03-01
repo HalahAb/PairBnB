@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
   #shows a form to add a booking for the list_id in the url.
   def new
     @listing = Listing.find(params[:listing_id])
+    @amenities = @listing.bitfield_values(:amenities).select{|key,value| value == true }
   end
 
   #submits the new booking dates for the signed in user to the db
@@ -24,7 +25,7 @@ class BookingsController < ApplicationController
     @booking.listing_id = params[:listing_id]
     # @listing = Listing.find(params[:listing_id])
     if @booking.save 
-      ReservationMailer.reservation_email(@booking.guest, @booking.host, @booking.id).deliver_later 
+      ReservationMailer.reservation_email(@booking.guest, @booking.host, @booking.id).deliver_now 
       redirect_to '/listings/'+params[:listing_id]+'/bookings'+'/'+ @booking.id.to_s+'/new_payment'
        # new_payment_path(@listing.id, @booking.id)
     else
