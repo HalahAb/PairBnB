@@ -10,7 +10,6 @@ CarrierWave.configure do |config|
   
   # Use AWS storage if in production
   if Rails.env.production?
-    config.storage = :fog
     
     config.fog_credentials = {
       :provider               => 'AWS',                 # required
@@ -20,6 +19,7 @@ CarrierWave.configure do |config|
       # optional, defaults to 'us-east-1'
     }
 
+    config.storage = :fog
     config.fog_directory  = ENV['BUCKET_NAME']                      # required
     #config.fog_host       = 'https://assets.example.com'           # optional, defaults to nil
     #config.fog_public     = false                                  # optional, defaults to true
