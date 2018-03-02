@@ -10,23 +10,14 @@
 <% if current_user.id != @listing.host_id %>
   <div class="container mt-0">
     <%= form_for([@listing, Booking.new],:html => {:class => "form-control form-inline"} ) do |form| %>
+      <%= form.label :start_date, style: 'margin: 1%'%>
+      <%= form.text_field( :start_date, class: 'form-control mb-2 mr-sm-2 date_pickr') %>
+    
+      <%= form.label :end_date, style: 'margin: 1%' %>
+      <%= form.text_field(:end_date, class: 'form-control mb-2 mr-sm-2 date_pickr') %>
 
-     
+      <%= form.submit "Reserve!", class: "btn btn-primary mb-2", style: 'margin-left: 5%'  %>
 
-        
-          <%= form.label :start_date, style: 'margin: 1%'%>
-          <%= form.text_field( :start_date, class: 'form-control mb-2 mr-sm-2 date_pickr') %>
-        
-
-
-        
-          <%= form.label :end_date, style: 'margin: 1%' %>
-          <%= form.text_field(:end_date, class: 'form-control mb-2 mr-sm-2 date_pickr') %>
-        
-
-       <%= form.submit "Reserve!", class: "btn btn-primary mb-2", style: 'margin-left: 5%'  %>
-
-      
     <% end %>
 <% end %>
 
@@ -35,46 +26,29 @@
   <div>
     <% if @booking_error %>
     <!-- <p> Opps! Booking you have choosen is unavailable. Please, check other dates. </p> -->
-
     <p> <%= flash[:notice] =  @booking.errors.messages[:start_date].first%> <p>
     <p> <%=flash[:notice] =   @booking.errors.messages[:end_date].first %> <p>
     <p> <%=flash[:notice] =   @booking.errors.messages[:base].first %> <p> 
-
-
    <%end%>
   </div>
 </div>
 
 
-<%# @blocked_dates = "" %>
-<%# @listing.bookings.each do |listing| %>
-  <%# @blocked_dates += (listing.start_date..listing.end_date).to_a.map(&:to_s).join(', ') %>
-<%# end %>
-<%#byebug%>
-
-
-
-<% @blocked_dates = '' %>
-
-<% @from= 'from: " ' %>
-<%@to='to: "'%>
-<% @listing.bookings.each do |listing| %>
-  <% @blocked_dates += '{ '+@from +listing.start_date.to_s+'", '+ @to + listing.end_date.to_s+'"}' %>
-
-    <% if listing != @listing.bookings.last %>
-    <% @blocked_dates = @blocked_dates + ','%>
-    <% else %>
-    <%@blocked_dates = @blocked_dates %>
-    <%end %> 
-
-<% end %>
-
-
-
 <script type="text/javascript">
+  var blocked_dates = [];
+
+  <% @listing.bookings.each do |booking| %>
+    var date_range = {
+      from: "<%= booking.start_date.to_s %>",
+      to: "<%= booking.end_date.to_s %>",
+    };
+    blocked_dates.push(date_range);
+  <% end %>
+
   (function(){
     $('.date_pickr').flatpickr({
       dateFormat: "Y-m-d",
-      disable: [<%@blocked_dates%>] });
+      disable: blocked_dates
+    });
   })();
 </script>
