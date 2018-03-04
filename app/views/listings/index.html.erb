@@ -2,8 +2,21 @@
 <div class = "container">
   <br/>
   <h2>Listings </h2>
+<%=form_tag({controller: "listings", action: "search"}, method: "get", class: "") do %>
+    <div class ="row">
+      <%= text_field_tag(:search_term, "", placeholder: "Search location", class: 'form-control col-md-5 mr-3') %>
+    </div>
 
-                
+    <div class ="row mt-4">
+       <% Listing.bitfields[:amenities].each do |amenity, _| %>
+            <%= check_box_tag "amenities[#{amenity.to_s}]", amenity.to_s, false, class:"" %>&nbsp
+            <%= label_tag amenity.to_s.humanize, nil, class:"", style:"font-size:15px"%> &nbsp &nbsp
+        <% end %>
+     <%= submit_tag("Search") %>
+  <% end %>
+
+</div>
+
 
   <div class="column">
  <% @listings.in_groups_of(2,false).each do|group| %> 
@@ -14,8 +27,8 @@
 
             <div class="card  w-50" style = " padding: 2%">
               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-              <%if listing.listing_images !=[]%>
-              <%= image_tag listing.listing_images[0].url, class:"img-thumbnail mb-3" %>
+              <%if listing.listing_images.present?%>
+                <%= image_tag listing.listing_images[0].url, class:"img-thumbnail mb-3" %>
               <%end%>
         
 
