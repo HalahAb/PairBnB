@@ -58,13 +58,23 @@ class ListingsController < ApplicationController
 
   
   def search
-    @listings = Listing.where("location ILIKE :search_term OR title ILIKE :search_term", search_term: "%#{params[:search_term].downcase}%")
 
-    if filtering_params['amenities'].present?
-      filtering_params['amenities'].each do |key, value|
-        @listings = @listings.public_send(key) if value == '1'
-      end
+    if params[:search_term].present?
+      @listings = Listing.where("location ILIKE :search_term OR title ILIKE :search_term", search_term: "%#{params[:search_term].downcase}%")
+    else
+      @listings= Listing.all
     end
+
+      if filtering_params['amenities'].present?
+        filtering_params['amenities'].each do |key, value|
+
+          @listings = @listings.public_send(key)
+        end
+      end
+
+
+
+
 
     render 'index'
     # redirect_to '/listings'
