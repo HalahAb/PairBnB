@@ -37,12 +37,10 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" id ="search_nav">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-
-
+      <%= form_tag({controller: "listings", action: "search"}, method: "get", class: "form-inline my-2 my-lg-0") do %>
+        <%= text_field_tag(:search_term, "", placeholder: "Search location", id: 'search_nav', class: 'form-control col-md-5 mr-2 ml-2') %>
+        <%= submit_tag "Search", class: 'btn btn-outline-success my-2 my-sm-0' %>
+      <% end %>
 
       <ul class="navbar-nav ml-5">
 

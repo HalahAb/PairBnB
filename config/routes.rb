@@ -12,10 +12,12 @@ Rails.application.routes.draw do
       controller: "clearance/passwords",
       only: [:create, :edit, :update]
   end
-
+  get "/listings/search" => "listings#search", as: "search"
+  
   resources :listings do
     resources :bookings
   end
+
 
   get "/users/current_user/bookings" => "bookings#user_bookings", as: "user_bookings"
   get "/users/:user_id/listings" => "listings#user_listings", as: "user_listings"

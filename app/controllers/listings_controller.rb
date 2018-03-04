@@ -57,23 +57,42 @@ class ListingsController < ApplicationController
   end
 
   
-  private
+  def search
+    @listings = Listing.where("location ILIKE :search_term OR title ILIKE :search_term", search_term: "%#{params[:search_term].downcase}%")
 
-  def listing_params
-    # {"first_name"=>"asdf", "last_name"=>"asdf"}
-    params.require(:listing).permit(:title, :description,:price,:location, {listing_images: []},:parking, 
-    :wifi, 
-    :disabled_access, 
-    :smoking, 
-    :kitchen, 
-    :pool, 
-    :garden, 
-    :private_room, 
-    :airconditioning, 
-    :event_hosting, 
-    :gym, 
-    :elevator)
+    if filtering_params['amenities'].present?
+      filtering_params['amenities'].each do |key, value|
+        @listings = @listings.public_send(key) if value == '1'
+      end
+    end
+
+    render 'index'
+    # redirect_to '/listings'
+
   end
 
+  
+  private
 
-end
+    def listing_params
+      # {"first_name"=>"asdf", "last_name"=>"asdf"}
+      params.require(:listing).permit(:title, :description,:price,:location, {listing_images: []},:parking, 
+      :wifi, 
+      :disabled_access, 
+      :smoking, 
+      :kitchen, 
+      :pool, 
+      :garden, 
+      :private_room, 
+      :airconditioning, 
+      :event_hosting, 
+      :gym, 
+      :elevator)
+    end
+
+    def filtering_params
+      params.slice('amenities')
+    end
+
+
+  end
